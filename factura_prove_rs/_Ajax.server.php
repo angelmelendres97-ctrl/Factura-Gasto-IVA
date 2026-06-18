@@ -44,6 +44,59 @@ function asignar_valor_fact($val = 0, $id = '', $eti = '', $aForm = '')
 	return $oReturn;
 }
 
+
+function porcentaje_iva_desde_xml_sri($totalImpuesto)
+{
+	$tarifa = isset($totalImpuesto->tarifa) ? (float)$totalImpuesto->tarifa : null;
+	if ($tarifa !== null && $tarifa >= 0) {
+		return $tarifa;
+	}
+	$codigoPorcentaje = isset($totalImpuesto->codigoPorcentaje) ? (string)$totalImpuesto->codigoPorcentaje : '';
+	$mapa = array(
+		'0' => 0,
+		'2' => 12,
+		'3' => 14,
+		'4' => 15,
+		'5' => 5,
+		'10' => 13,
+	);
+	return isset($mapa[$codigoPorcentaje]) ? $mapa[$codigoPorcentaje] : 0;
+}
+
+function agregar_iva_multiple_xml_sri(&$detalles, $tipo, $porcentaje, $base, $iva)
+{
+	$base = round((float)$base, 2);
+	$iva = round((float)$iva, 2);
+	$porcentaje = round((float)$porcentaje, 6);
+	if ($base == 0 && $iva == 0) {
+		return;
+	}
+	$clave = $tipo . '|' . $porcentaje;
+	if (!isset($detalles[$clave])) {
+		$detalles[$clave] = array(
+			'tipo' => $tipo,
+			'porcentaje_iva' => $porcentaje,
+			'base_imponible' => 0,
+			'valor_iva' => 0,
+			'total' => 0,
+		);
+	}
+	$detalles[$clave]['base_imponible'] += $base;
+	$detalles[$clave]['valor_iva'] += $iva;
+	$detalles[$clave]['total'] += round($base + $iva, 2);
+}
+
+function script_cargar_iva_multiple_xml_sri($detalles)
+{
+	$filas = array_values($detalles);
+	foreach ($filas as &$fila) {
+		$fila['base_imponible'] = round($fila['base_imponible'], 2);
+		$fila['valor_iva'] = round($fila['valor_iva'], 2);
+		$fila['total'] = round($fila['total'], 2);
+	}
+	return "cargarIvaMultipleDesdeSri(" . json_encode($filas) . ");";
+}
+
 function obtener_iva_multiple_factura($aForm)
 {
 	$detalles = array();
@@ -2342,26 +2395,17 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 													<button type="button" class="btn btn-primary btn-xs" onclick="agregarFilaIvaMultiple(\'bienes\', 0, 0, 0);">Agregar IVA bienes</button>
 												</td>
 											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab12b') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab12b') . '</td>
+											<tr class="info">
+												<td colspan="2">Resumen dinámico BIENES</td>
 											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab0b') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab0b') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('iceb') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('iceb') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('ivab') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('ivab') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('ivabp') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('ivabp') . '</td>
-											</tr>
+											<tbody id="iva_multiple_bienes_resumen"></tbody>
+											<tbody style="display:none;">
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab12b') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab12b') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab0b') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab0b') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('iceb') . '</td><td align="right">' . $ifu->ObjetoHtml('iceb') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('ivab') . '</td><td align="right">' . $ifu->ObjetoHtml('ivab') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('ivabp') . '</td><td align="right">' . $ifu->ObjetoHtml('ivabp') . '</td></tr>
+											</tbody>
 											<tr>
 												<td></td>
 												<td></td>
@@ -2403,22 +2447,16 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 													<button type="button" class="btn btn-primary btn-xs" onclick="agregarFilaIvaMultiple(\'servicios\', 0, 0, 0);">Agregar IVA servicios</button>
 												</td>
 											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab12s') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab12s') . '</td>
+											<tr class="info">
+												<td colspan="2">Resumen dinámico SERVICIOS</td>
 											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab0s') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab0s') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('ices') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('ices') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('ivas') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('ivas') . '</td>
-											</tr>
+											<tbody id="iva_multiple_servicios_resumen"></tbody>
+											<tbody style="display:none;">
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab12s') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab12s') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab0s') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab0s') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('ices') . '</td><td align="right">' . $ifu->ObjetoHtml('ices') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('ivas') . '</td><td align="right">' . $ifu->ObjetoHtml('ivas') . '</td></tr>
+											</tbody>
 											
 											<tr>
 												<td>&nbsp;</td>
@@ -2431,38 +2469,18 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 											<tr>
 												<td class="bg-info" colspan="2">TOTAL</td>
 											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab12t') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab12t') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab0t') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab0t') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('icet') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('icet') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('ivat') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('ivat') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_noObjIva') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_noObjIva') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_exentoIva') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_exentoIva') . '</td>
-											</tr>
-											<tr style="display: none;">
-												<td>' . $ifu->ObjetoHtmlLBL('no_obj_iva') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('no_obj_iva') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('totals') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('totals') . '</td>
-											</tr>
+											<tr class="info"><td colspan="2">Resumen dinámico TOTAL</td></tr>
+											<tbody id="iva_multiple_total_resumen"></tbody>
+											<tbody style="display:none;">
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab12t') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab12t') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab0t') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab0t') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('icet') . '</td><td align="right">' . $ifu->ObjetoHtml('icet') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('ivat') . '</td><td align="right">' . $ifu->ObjetoHtml('ivat') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_noObjIva') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_noObjIva') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_exentoIva') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_exentoIva') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('no_obj_iva') . '</td><td align="right">' . $ifu->ObjetoHtml('no_obj_iva') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('totals') . '</td><td align="right">' . $ifu->ObjetoHtml('totals') . '</td></tr>
+											</tbody>
 										</table>
 									</td>
 								</tr>
@@ -8505,22 +8523,27 @@ function clave_acceso($aForm = '', $tipo)
 			$totalbien = 0;
 			$totalserv = 0;
 			$totalexcento = 0;
+			$valor_grab12b = 0;
+			$valor_grab0s = 0;
+			$iva_multiple_xml = array();
 			foreach ($totalImpuesto as $bases) {
-				$codigoPorcentaje	= $bases->codigoPorcentaje;
-				$baseImponible 		= $bases->baseImponible;
-				$valor 				= $bases->valor;
+				$codigoPorcentaje	= (string)$bases->codigoPorcentaje;
+				$baseImponible 		= (float)$bases->baseImponible;
+				$valor 				= (float)$bases->valor;
+				$porcentajeIva 		= porcentaje_iva_desde_xml_sri($bases);
 
-				if ($codigoPorcentaje == 2) {
-					$valor_grab12b = $baseImponible . '';
-					$totalbien = $totalbien + $valor_grab12b;
-				} elseif ($codigoPorcentaje == 4) {
-					$valor_grab12b = $baseImponible . '';
-					$totalbien = $totalbien + $valor_grab12b;
-				} elseif ($codigoPorcentaje == 0) {
-					$valor_grab0s = $baseImponible . '';
-					$totalserv = $totalserv + $valor_grab0s;
-				} elseif ($codigoPorcentaje == 7) {
+				if ($codigoPorcentaje == 7) {
 					$totalexcento = $totalexcento + $baseImponible;
+					continue;
+				}
+
+				agregar_iva_multiple_xml_sri($iva_multiple_xml, 'bienes', $porcentajeIva, $baseImponible, $valor);
+				if ($porcentajeIva > 0) {
+					$valor_grab12b = $valor_grab12b + $baseImponible;
+					$totalbien = $totalbien + $baseImponible;
+				} else {
+					$valor_grab0s = $valor_grab0s + $baseImponible;
+					$totalserv = $totalserv + $baseImponible;
 				}
 			}
 
@@ -8584,8 +8607,7 @@ function clave_acceso($aForm = '', $tipo)
 							$oReturn->assign('valor_grab0t', 'value', $totalserv);
 							$oReturn->assign('valor_exentoIva', 'value', $totalexcento);
 
-							$oReturn->script('totales(this)');
-							$oReturn->script('totales1(this)');
+											$oReturn->script(script_cargar_iva_multiple_xml_sri($iva_multiple_xml));
 						} else {
 							$mensaje = 'El numero de identificacion del Proveedor: ' . $ruc . ' no coincide con la identificacion del archivo xml: ' . $identificacionComprador;
 							$tipo_mesaje = 'info';
@@ -8646,10 +8668,10 @@ function clave_acceso($aForm = '', $tipo)
 							$oReturn->assign('valor_grab12t', 'value', $totalbien);
 							$oReturn->assign('valor_grab0t', 'value', $totalserv);
 							$oReturn->assign('valor_exentoIva', 'value', $totalexcento);
+											$oReturn->script(script_cargar_iva_multiple_xml_sri($iva_multiple_xml));
 							
 
 							$oReturn->assign('tipo_factura', 'value', '1');
-							$oReturn->assign('auto_prove', 'value', '');
 							/*CAMBIO CARACT ESPECIALES FACTURAS AD*/
 							$deta = iconv('UTF-8', 'ASCII//TRANSLIT', $deta);
 							$deta = preg_replace('/[^a-zA-Z0-9 ]/', '', $deta);
