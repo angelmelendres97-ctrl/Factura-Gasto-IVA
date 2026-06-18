@@ -523,6 +523,38 @@ else $codclpv = 0; ?>
 
 
 
+
+
+        function facturaProveActualizarIvaMultiple() {
+            var rows = document.querySelectorAll('[data-iva-multiple-row]');
+            var detalle = [];
+            var totals = {baseb: 0, bases: 0, ivab: 0, ivas: 0};
+            rows.forEach(function(row) {
+                var pct = parseFloat(row.getAttribute('data-iva-pct')) || 0;
+                var baseb = parseFloat((row.querySelector('[data-iva-campo="baseb"]') || {}).value) || 0;
+                var bases = parseFloat((row.querySelector('[data-iva-campo="bases"]') || {}).value) || 0;
+                var ivab = Math.round((baseb * pct / 100) * 100) / 100;
+                var ivas = Math.round((bases * pct / 100) * 100) / 100;
+                if (row.querySelector('[data-iva-campo="ivab"]')) row.querySelector('[data-iva-campo="ivab"]').value = ivab.toFixed(2);
+                if (row.querySelector('[data-iva-campo="ivas"]')) row.querySelector('[data-iva-campo="ivas"]').value = ivas.toFixed(2);
+                if (row.querySelector('[data-iva-campo="total"]')) row.querySelector('[data-iva-campo="total"]').value = (baseb + bases + ivab + ivas).toFixed(2);
+                if (baseb > 0 || bases > 0 || ivab > 0 || ivas > 0) {
+                    detalle.push({porcentaje_iva: pct, base_bienes: baseb, iva_bienes: ivab, total_bienes: baseb + ivab, base_servicios: bases, iva_servicios: ivas, total_servicios: bases + ivas});
+                }
+                totals.baseb += baseb; totals.bases += bases; totals.ivab += ivab; totals.ivas += ivas;
+            });
+            var hidden = document.getElementById('iva_multiple_detalle');
+            if (hidden) hidden.value = JSON.stringify(detalle);
+            if (detalle.length > 0) {
+                document.getElementById('valor_grab12b').value = totals.baseb.toFixed(2);
+                document.getElementById('valor_grab12s').value = totals.bases.toFixed(2);
+                document.getElementById('ivab').value = totals.ivab.toFixed(2);
+                document.getElementById('ivas').value = totals.ivas.toFixed(2);
+                if (document.getElementById('ivabp')) document.getElementById('ivabp').value = '';
+                xajax_totales(xajax.getFormValues("form1"));
+            }
+        }
+
         function totales(cont) {
 
             var a = cont.value;
