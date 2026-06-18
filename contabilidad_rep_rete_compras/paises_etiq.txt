@@ -1,0 +1,12 @@
+CREATE TABLE `pais_etiq_imp` (
+	`id_etiq_imp` INT(10) NOT NULL AUTO_INCREMENT,
+	`pais_cod_pais` INT(10) NULL DEFAULT NULL,
+	`pais_codigo_inter` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8_bin',
+	`impuesto` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8_bin',
+	`etiqueta` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8_bin',
+	`porcentaje` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8_bin',
+	PRIMARY KEY (`id_etiq_imp`)
+)
+COLLATE='utf8_bin'
+ENGINE=InnoDB
+AUTO_INCREMENT=14;
