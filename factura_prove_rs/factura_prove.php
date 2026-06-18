@@ -524,6 +524,7 @@ else $codclpv = 0; ?>
 
 
         function totales(cont) {
+            sincronizarIvaMultiple();
 
             var a = cont.value;
             var ab = document.getElementById('fisc_b');
@@ -558,6 +559,7 @@ else $codclpv = 0; ?>
         }
 
         function totales1(cont) {
+            sincronizarIvaMultiple();
 
             var a = cont.value;
             // var ab = document.getElementById('fisc_b');
@@ -569,6 +571,105 @@ else $codclpv = 0; ?>
             }
             xajax_totales(xajax.getFormValues("form1"));
             //genera_comprobante();
+        }
+
+        function numeroIvaMultiple(valor) {
+            valor = (valor || 0).toString().replace(',', '.');
+            var numero = parseFloat(valor);
+            return isNaN(numero) ? 0 : numero;
+        }
+
+        function agregarFilaIvaMultiple(tipo, porcentaje, base, iva) {
+            var cuerpo = document.getElementById('iva_multiple_' + tipo + '_body');
+            if (!cuerpo) {
+                return;
+            }
+            porcentaje = porcentaje || 0;
+            base = base || 0;
+            iva = iva || 0;
+            var fila = document.createElement('tr');
+            fila.innerHTML = '<td><select class="form-control input-sm iva-multiple-porcentaje" onchange="calcularIvaMultiple();" style="width:80px; height:25px;">' +
+                '<option value="0">0%</option><option value="5">5%</option><option value="12">12%</option><option value="15">15%</option>' +
+                '</select></td>' +
+                '<td><input type="text" class="form-control input-sm iva-multiple-base" value="' + base + '" onchange="calcularIvaMultiple();" onkeyup="calcularIvaMultiple();" style="width:90px; height:25px; text-align:right"></td>' +
+                '<td><input type="text" class="form-control input-sm iva-multiple-iva" value="' + iva + '" onchange="calcularIvaMultiple();" onkeyup="calcularIvaMultiple();" style="width:90px; height:25px; text-align:right"></td>' +
+                '<td><input type="text" class="form-control input-sm iva-multiple-total" value="0" readonly style="width:90px; height:25px; text-align:right"></td>' +
+                '<td><button type="button" class="btn btn-danger btn-xs" onclick="this.parentNode.parentNode.remove(); calcularIvaMultiple();">x</button></td>';
+            cuerpo.appendChild(fila);
+            fila.querySelector('.iva-multiple-porcentaje').value = porcentaje;
+            calcularIvaMultiple();
+        }
+
+        function calcularIvaMultiple() {
+            var resumen = {
+                bienes: {
+                    base_gravada: 0,
+                    base_cero: 0,
+                    iva: 0,
+                    total: 0,
+                    detalles: []
+                },
+                servicios: {
+                    base_gravada: 0,
+                    base_cero: 0,
+                    iva: 0,
+                    total: 0,
+                    detalles: []
+                }
+            };
+
+            ['bienes', 'servicios'].forEach(function(tipo) {
+                var cuerpo = document.getElementById('iva_multiple_' + tipo + '_body');
+                if (!cuerpo) {
+                    return;
+                }
+                Array.prototype.forEach.call(cuerpo.querySelectorAll('tr'), function(fila) {
+                    var porcentaje = numeroIvaMultiple(fila.querySelector('.iva-multiple-porcentaje').value);
+                    var base = numeroIvaMultiple(fila.querySelector('.iva-multiple-base').value);
+                    var ivaInput = fila.querySelector('.iva-multiple-iva');
+                    var iva = numeroIvaMultiple(ivaInput.value);
+                    if (base > 0 && (ivaInput.value === '' || iva === 0)) {
+                        iva = Math.round((base * porcentaje / 100) * 100) / 100;
+                        ivaInput.value = iva.toFixed(2);
+                    }
+                    var total = Math.round((base + iva) * 100) / 100;
+                    fila.querySelector('.iva-multiple-total').value = total.toFixed(2);
+                    if (porcentaje > 0) {
+                        resumen[tipo].base_gravada += base;
+                    } else {
+                        resumen[tipo].base_cero += base;
+                    }
+                    resumen[tipo].iva += iva;
+                    resumen[tipo].total += total;
+                    resumen[tipo].detalles.push({
+                        tipo: tipo,
+                        porcentaje_iva: porcentaje,
+                        base_imponible: base,
+                        valor_iva: iva,
+                        total: total
+                    });
+                });
+            });
+
+            if (document.getElementById('valor_grab12b')) document.getElementById('valor_grab12b').value = resumen.bienes.base_gravada.toFixed(2);
+            if (document.getElementById('valor_grab0b')) document.getElementById('valor_grab0b').value = resumen.bienes.base_cero.toFixed(2);
+            if (document.getElementById('ivab')) document.getElementById('ivab').value = resumen.bienes.iva.toFixed(2);
+            if (document.getElementById('valor_grab12s')) document.getElementById('valor_grab12s').value = resumen.servicios.base_gravada.toFixed(2);
+            if (document.getElementById('valor_grab0s')) document.getElementById('valor_grab0s').value = resumen.servicios.base_cero.toFixed(2);
+            if (document.getElementById('ivas')) document.getElementById('ivas').value = resumen.servicios.iva.toFixed(2);
+            sincronizarIvaMultiple(resumen);
+        }
+
+        function sincronizarIvaMultiple(resumen) {
+            var campo = document.getElementById('iva_multiple_json');
+            if (!campo) {
+                return;
+            }
+            if (!resumen) {
+                calcularIvaMultiple();
+                return;
+            }
+            campo.value = JSON.stringify([].concat(resumen.bienes.detalles, resumen.servicios.detalles));
         }
 
         function abrir_xml(xml) {
