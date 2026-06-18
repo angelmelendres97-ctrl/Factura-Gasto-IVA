@@ -44,6 +44,53 @@ function asignar_valor_fact($val = 0, $id = '', $eti = '', $aForm = '')
 	return $oReturn;
 }
 
+function obtener_iva_multiple_factura($aForm)
+{
+	$detalles = array();
+	if (!empty($aForm['iva_multiple_json'])) {
+		$tmp = json_decode($aForm['iva_multiple_json'], true);
+		if (is_array($tmp)) {
+			foreach ($tmp as $fila) {
+				$tipo = isset($fila['tipo']) ? $fila['tipo'] : '';
+				$porcentaje = isset($fila['porcentaje_iva']) ? (float)$fila['porcentaje_iva'] : 0;
+				$base = isset($fila['base_imponible']) ? (float)$fila['base_imponible'] : 0;
+				$iva = isset($fila['valor_iva']) ? (float)$fila['valor_iva'] : round(($base * $porcentaje) / 100, 2);
+				if (($tipo == 'bienes' || $tipo == 'servicios') && ($base != 0 || $iva != 0)) {
+					$detalles[] = array('tipo' => $tipo, 'porcentaje_iva' => $porcentaje, 'base_imponible' => $base, 'valor_iva' => $iva, 'total' => isset($fila['total']) ? (float)$fila['total'] : round($base + $iva, 2));
+				}
+			}
+		}
+	}
+	if (count($detalles) == 0) {
+		$ivabp = isset($aForm['ivabp']) ? (float)$aForm['ivabp'] : 0;
+		$campos = array(array('bienes', $ivabp, 'valor_grab12b', 'ivab'), array('bienes', 0, 'valor_grab0b', ''), array('servicios', $ivabp, 'valor_grab12s', 'ivas'), array('servicios', 0, 'valor_grab0s', ''));
+		foreach ($campos as $campo) {
+			$base = isset($aForm[$campo[2]]) ? (float)$aForm[$campo[2]] : 0;
+			$iva = ($campo[3] != '' && isset($aForm[$campo[3]])) ? (float)$aForm[$campo[3]] : round(($base * $campo[1]) / 100, 2);
+			if ($base != 0 || $iva != 0) {
+				$detalles[] = array('tipo' => $campo[0], 'porcentaje_iva' => $campo[1], 'base_imponible' => $base, 'valor_iva' => $iva, 'total' => round($base + $iva, 2));
+			}
+		}
+	}
+	return $detalles;
+}
+
+function guardar_iva_multiple_factura($oIfx, $idempresa, $idsucursal, $factura, $serie, $cod_prove, $usuario, $aForm)
+{
+	$detalles = obtener_iva_multiple_factura($aForm);
+	$sql = "delete from saefprv_iva_det where fpid_cod_empr = $idempresa and fpid_cod_sucu = $idsucursal and fpid_num_fact = '$factura' and fpid_num_seri = '$serie' and fpid_cod_clpv = $cod_prove";
+	$oIfx->QueryT($sql);
+	foreach ($detalles as $detalle) {
+		$tipo = ($detalle['tipo'] == 'servicios') ? 'S' : 'B';
+		$porcentaje = number_format($detalle['porcentaje_iva'], 6, '.', '');
+		$base = number_format($detalle['base_imponible'], 4, '.', '');
+		$iva = number_format($detalle['valor_iva'], 4, '.', '');
+		$total = number_format($detalle['total'], 4, '.', '');
+		$sql = "insert into saefprv_iva_det (fpid_cod_empr, fpid_cod_sucu, fpid_num_fact, fpid_num_seri, fpid_cod_clpv, fpid_tip_reg, fpid_por_iva, fpid_base_imp, fpid_val_iva, fpid_val_total, fpid_est_reg, fpid_user_web, fpid_fech_server) values ($idempresa, $idsucursal, '$factura', '$serie', $cod_prove, '$tipo', $porcentaje, $base, $iva, $total, '1', '$usuario', current)";
+		$oIfx->QueryT($sql);
+	}
+}
+
 function orden_compra_reporte_det($serial, $idempresa, $idsucursal, $aForm = '')
 {
 	global $DSN, $DSN_Ifx;
@@ -2238,7 +2285,8 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 
 
 	//valores facturas
-	$sHtmlValoresFacturas .= '<table class="table table-bordered table-striped table-condensed" style="width: 100%; margin: 0px;">
+	$sHtmlValoresFacturas .= '<input type="hidden" id="iva_multiple_json" name="iva_multiple_json" value="" />
+							<table class="table table-bordered table-striped table-condensed" style="width: 100%; margin: 0px;">
 								<tr>
 									<td class="bg-primary" style="width: 98%;" colspan="3">
 										<table style="width: 100%; margin: 0px;">
@@ -2274,6 +2322,25 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 										<table class="table-bordered table-striped table-condensed" style="width: 100%; margin: 0px;">
 											<tr>
 												<td class="bg-info" colspan="2">BIENES</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<table class="table table-bordered table-condensed" style="width:100%; margin:0px;">
+														<thead>
+															<tr class="info"><th>% IVA</th><th>Base</th><th>IVA</th><th>Total</th><th></th></tr>
+														</thead>
+														<tbody id="iva_multiple_bienes_body">
+															<tr>
+																<td><select class="form-control input-sm iva-multiple-porcentaje" onchange="calcularIvaMultiple();" style="width:80px; height:25px;"><option value="0">0%</option><option value="5">5%</option><option value="12">12%</option><option value="15" selected>15%</option></select></td>
+																<td><input type="text" class="form-control input-sm iva-multiple-base" value="0" onchange="calcularIvaMultiple();" onkeyup="calcularIvaMultiple();" style="width:90px; height:25px; text-align:right"></td>
+																<td><input type="text" class="form-control input-sm iva-multiple-iva" value="0" onchange="calcularIvaMultiple();" onkeyup="calcularIvaMultiple();" style="width:90px; height:25px; text-align:right"></td>
+																<td><input type="text" class="form-control input-sm iva-multiple-total" value="0" readonly style="width:90px; height:25px; text-align:right"></td>
+																<td><button type="button" class="btn btn-danger btn-xs" onclick="this.parentNode.parentNode.remove(); calcularIvaMultiple();">x</button></td>
+															</tr>
+														</tbody>
+													</table>
+													<button type="button" class="btn btn-primary btn-xs" onclick="agregarFilaIvaMultiple(\'bienes\', 0, 0, 0);">Agregar IVA bienes</button>
+												</td>
 											</tr>
 											<tr>
 												<td>' . $ifu->ObjetoHtmlLBL('valor_grab12b') . '</td>
@@ -2324,6 +2391,17 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 										<table class="table-bordered table-striped table-condensed" style="width: 100%; margin: 0px;">
 											<tr>
 												<td class="bg-info" colspan="2">SERVICIOS</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<table class="table table-bordered table-condensed" style="width:100%; margin:0px;">
+														<thead>
+															<tr class="info"><th>% IVA</th><th>Base</th><th>IVA</th><th>Total</th><th></th></tr>
+														</thead>
+														<tbody id="iva_multiple_servicios_body"></tbody>
+													</table>
+													<button type="button" class="btn btn-primary btn-xs" onclick="agregarFilaIvaMultiple(\'servicios\', 0, 0, 0);">Agregar IVA servicios</button>
+												</td>
 											</tr>
 											<tr>
 												<td>' . $ifu->ObjetoHtmlLBL('valor_grab12s') . '</td>
@@ -4123,6 +4201,36 @@ function totales($aForm = '')
 	$icet = $iceb + $ices;
 	$ivat = $ivab + $ivas;
 
+	$detalles_iva_multiple = obtener_iva_multiple_factura($aForm);
+	if (count($detalles_iva_multiple) > 0 && !empty($aForm['iva_multiple_json'])) {
+		$valor_grab12b = 0;
+		$valor_grab0b = 0;
+		$ivab = 0;
+		$valor_grab12s = 0;
+		$valor_grab0s = 0;
+		$ivas = 0;
+		foreach ($detalles_iva_multiple as $detalle_iva) {
+			if ($detalle_iva['tipo'] == 'bienes') {
+				if ($detalle_iva['porcentaje_iva'] > 0) {
+					$valor_grab12b += $detalle_iva['base_imponible'];
+				} else {
+					$valor_grab0b += $detalle_iva['base_imponible'];
+				}
+				$ivab += $detalle_iva['valor_iva'];
+			} else {
+				if ($detalle_iva['porcentaje_iva'] > 0) {
+					$valor_grab12s += $detalle_iva['base_imponible'];
+				} else {
+					$valor_grab0s += $detalle_iva['base_imponible'];
+				}
+				$ivas += $detalle_iva['valor_iva'];
+			}
+		}
+		$valor_grab12t = $valor_grab12b + $valor_grab12s;
+		$valor_grab0t = $valor_grab0b + $valor_grab0s;
+		$ivat = $ivab + $ivas;
+	}
+
 	// RETENCIONES
 	$base_fue_b = $valor_grab12b + $valor_grab0b;
 	$base_fue_s = $valor_grab12s + $valor_grab0s;
@@ -4776,6 +4884,37 @@ function guarda_pedido($codpgs, $aForm = '')
 
 			$formato         = $aForm['formato'];
 
+			$detalles_iva_multiple = obtener_iva_multiple_factura($aForm);
+			if (count($detalles_iva_multiple) > 0 && !empty($aForm['iva_multiple_json'])) {
+				$valor_grab12b = 0;
+				$valor_grab0b = 0;
+				$ivab = 0;
+				$valor_grab12s = 0;
+				$valor_grab0s = 0;
+				$ivas = 0;
+				foreach ($detalles_iva_multiple as $detalle_iva) {
+					if ($detalle_iva['tipo'] == 'bienes') {
+						if ($detalle_iva['porcentaje_iva'] > 0) {
+							$valor_grab12b += $detalle_iva['base_imponible'];
+						} else {
+							$valor_grab0b += $detalle_iva['base_imponible'];
+						}
+						$ivab += $detalle_iva['valor_iva'];
+					} else {
+						if ($detalle_iva['porcentaje_iva'] > 0) {
+							$valor_grab12s += $detalle_iva['base_imponible'];
+						} else {
+							$valor_grab0s += $detalle_iva['base_imponible'];
+						}
+						$ivas += $detalle_iva['valor_iva'];
+					}
+				}
+				$valor_grab12t = $valor_grab12b + $valor_grab12s;
+				$valor_grab0t = $valor_grab0b + $valor_grab0s;
+				$ivat = $ivab + $ivas;
+				$totals = round(($valor_grab12t + $valor_grab0t + $icet + $ivat + $valor_exentoIva + $valor_noObjIva), 2);
+			}
+
 			if (empty($valor_exentoIva)) {
 				$valor_exentoIva = 0.00;
 			}
@@ -5190,6 +5329,7 @@ function guarda_pedido($codpgs, $aForm = '')
 					$oIfx->QueryT($sql);
 
 					$Logs->crearLog($factura, $secu_asto, $sql);
+					guardar_iva_multiple_factura($oIfx, $idempresa, $idsucursal, $factura, $serie, $cod_prove, $usuario_session, $aForm);
 
 					$sql = "select trans_tip_comp from saetran where
 									tran_cod_empr = $idempresa  and
