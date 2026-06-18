@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+	<infoTributaria>
+		<ambiente>2</ambiente>
+		<tipoEmision>1</tipoEmision>
+		<razonSocial>ALVARADO HURTADO SILVIO YOVANI</razonSocial>
+		<nombreComercial>ASERRIO SAN VICENTE</nombreComercial>
+		<ruc>0703777045001</ruc>
+		<claveAcceso>0601202501070377704500120010110000097551190081717</claveAcceso>
+		<codDoc>01</codDoc>
+		<estab>001</estab>
+		<ptoEmi>011</ptoEmi>
+		<secuencial>000009755</secuencial>
+		<dirMatriz>EL ORO / PORTOVELO / VIA A LOJA SN</dirMatriz>
+		<agenteRetencion>1</agenteRetencion>
+	</infoTributaria>
+<infoFactura>
+	<fechaEmision>06/01/2025</fechaEmision>
+	<dirEstablecimiento>VIA A LOJA</dirEstablecimiento>
+	<obligadoContabilidad>SI</obligadoContabilidad>
+	<tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+	<razonSocialComprador>OROCONCENT S. A.</razonSocialComprador>
+	<identificacionComprador>0791750962001</identificacionComprador>
+	<direccionComprador>PORTOVELO SITIO EL TABLON VIA SAN JOSE</direccionComprador>
+	<totalSinImpuestos>3919.51</totalSinImpuestos>
+	<totalDescuento>0.00</totalDescuento>
+	<totalConImpuestos>
+		<totalImpuesto>
+		<codigo>2</codigo>
+		<codigoPorcentaje>4</codigoPorcentaje>
+		<descuentoAdicional>0.00</descuentoAdicional>
+		<baseImponible>605.22</baseImponible>
+		<valor>90.78</valor>
+		</totalImpuesto>
+		<totalImpuesto>
+		<codigo>2</codigo>
+		<codigoPorcentaje>5</codigoPorcentaje>
+		<descuentoAdicional>0.00</descuentoAdicional>
+		<baseImponible>3314.29</baseImponible>
+		<valor>165.71</valor>
+		</totalImpuesto>
+	</totalConImpuestos>
+	<propina>0.00</propina>
+	<importeTotal>4176.00</importeTotal>
+	<moneda>DOLAR</moneda>
+	<pagos>
+		<pago>
+		<formaPago>20</formaPago>
+		<total>4176.00</total>
+		<plazo>30</plazo>
+		<unidadTiempo>dias</unidadTiempo>
+		</pago>
+	</pagos>
+</infoFactura>
+<detalles>
+	<detalle>
+		<codigoPrincipal>3000030655</codigoPrincipal>
+		<codigoAuxiliar>F010101</codigoAuxiliar>
+		<descripcion>VARILLA NOVACERO CORRUG 12 X 12MT</descripcion>
+		<cantidad>40.000000</cantidad>
+		<precioUnitario>10.476190</precioUnitario>
+		<descuento>0.00</descuento>
+		<precioTotalSinImpuesto>419.05</precioTotalSinImpuesto>
+	<impuestos>
+		<impuesto>
+			<codigo>2</codigo>
+			<codigoPorcentaje>5</codigoPorcentaje>
+			<tarifa>5.00</tarifa>
+			<baseImponible>419.05</baseImponible>
+			<valor>20.95</valor>
+		</impuesto>
+	</impuestos>
+	</detalle>
+	<detalle>
+		<codigoPrincipal>3000030662</codigoPrincipal>
+		<descripcion>VARILLA NOVACERO CORRUG 16 X 12</descripcion>
+		<cantidad>30.000000</cantidad>
+		<precioUnitario>18.695652</precioUnitario>
+		<descuento>0.00</descuento>
+		<precioTotalSinImpuesto>560.87</precioTotalSinImpuesto>
+	<impuestos>
+		<impuesto>
+			<codigo>2</codigo>
+			<codigoPorcentaje>4</codigoPorcentaje>
+			<tarifa>15.00</tarifa>
+			<baseImponible>560.87</baseImponible>
+			<valor>84.13</valor>
+		</impuesto>
+	</impuestos>
+	</detalle>
+	<detalle>
+		<codigoPrincipal>747735</codigoPrincipal>
+		<codigoAuxiliar>F010601</codigoAuxiliar>
+		<descripcion>SIKA PLASTOCRETE 161 HE 10KG (BID) ACELE</descripcion>
+		<cantidad>3.000000</cantidad>
+		<precioUnitario>14.782608</precioUnitario>
+		<descuento>0.00</descuento>
+		<precioTotalSinImpuesto>44.35</precioTotalSinImpuesto>
+	<impuestos>
+		<impuesto>
+			<codigo>2</codigo>
+			<codigoPorcentaje>4</codigoPorcentaje>
+			<tarifa>15.00</tarifa>
+			<baseImponible>44.35</baseImponible>
+			<valor>6.65</valor>
+		</impuesto>
+	</impuestos>
+	</detalle>
+	<detalle>
+		<codigoPrincipal>40000036G</codigoPrincipal>
+		<codigoAuxiliar>F010401</codigoAuxiliar>
+		<descripcion>CEMENTO GUAPAN</descripcion>
+		<cantidad>400.000000</cantidad>
+		<precioUnitario>7.238095</precioUnitario>
+		<descuento>0.00</descuento>
+		<precioTotalSinImpuesto>2895.24</precioTotalSinImpuesto>
+	<impuestos>
+		<impuesto>
+			<codigo>2</codigo>
+			<codigoPorcentaje>5</codigoPorcentaje>
+			<tarifa>5.00</tarifa>
+			<baseImponible>2895.24</baseImponible>
+			<valor>144.76</valor>
+		</impuesto>
+	</impuestos>
+	</detalle>
+</detalles>
+<infoAdicional>
+	<campoAdicional nombre="Direccion">PORTOVELO SITIO EL TABLON VIA SAN JOSE</campoAdicional>
+	<campoAdicional nombre="Telefono">098 518 3148</campoAdicional>
+	<campoAdicional nombre="Email">bodegaoroconcent@gmail.com</campoAdicional>
+	<campoAdicional nombre="Vencimiento">05/02/2025</campoAdicional>
+	<campoAdicional nombre="Comercio">OROCONCENT S. A.</campoAdicional>
+</infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature684296">
+<ds:SignedInfo Id="Signature-SignedInfo743955">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod>
+<ds:Reference Id="SignedPropertiesID999656" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature684296-SignedProperties858388">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>R86NYOm+SAXoz7nRx9KWF5YPPTY=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1125497">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>2K2QjdMEVVcRRLff6otHEHxryqI=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-735408" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>kSL9Qc3Hr9MLRc02umN5ayrHwdY=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue332042">
+FyyIkKuUvyiIgDRXpBK3wI9ZJkU/YaghWyeqP8niucp4jQj/AmI4BenpTGapJYDxZ7mrwrXb+TmC
+74VfA79zZCxI18HwmE+kcMRrvyClILGmvZPJwfv7zDQGNbDe1h76clukB98Bmgz14zlfp0IgR48C
+EOqp5IGq8U5bNrvsPEdgpATcTZhpfdLWJqRn7JcSktf1b0+Hl3MmunbVDJ0EOkSUSj/tJ4cII+OW
+5xS8iD9mPgdjZjFR7C/TJfjCZ5PE0MGB/bw5G+zYKPSFmoPqKZGLYErw/90a3mCLOUog57o/pQI2
+cfSgtKKI1DrgwgOv9iE+83Q0BbwJpQNZq0vncQ==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1125497">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJJzCCBw+gAwIBAgIITF+PFNYpp3cwDQYJKoZIhvcNAQELBQAwgbgxCzAJBgNVBAYTAkVTMUQw
+QgYDVQQHDDtCYXJjZWxvbmEgKHNlZSBjdXJyZW50IGFkZHJlc3MgYXQgd3d3LnVhbmF0YWNhLmNv
+bS9hZGRyZXNzKTEWMBQGA1UECgwNVUFOQVRBQ0EgUy5BLjEVMBMGA1UECwwMVFNQLVVBTkFUQUNB
+MRowGAYDVQQDDBFVQU5BVEFDQSBDQTIgMjAxNjEYMBYGA1UEYQwPVkFURVMtQTY2NzIxNDk5MB4X
+DTI0MDQxMDAwMjYwMFoXDTI5MDMxMTEwMzczMVowgaIxCzAJBgNVBAYTAkVDMRkwFwYDVQQEDBBB
+TFZBUkFETyBIVVJUQURPMRYwFAYDVQQqDA1TSUxWSU8gWU9WQU5JMRkwFwYDVQQFExBJRENFQy0w
+NzAzNzc3MDQ1MScwJQYDVQQDDB5TSUxWSU8gWU9WQU5JIEFMVkFSQURPIEhVUlRBRE8xHDAaBgNV
+BGEME1RJTkVDLTA3MDM3NzcwNDUwMDEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDn
+CZfs8iUhrCBRIOMsZ8cUf2OdlhLwFC1uqIMbQxCUUY0mmDpTCi2hpG3DQhwWfVjZFA0DEc7hEgES
+jStdlyJKlQrnXq4Lp01VtR7xEc8JQQbWCAnKz1RkJa16RkdhfyvvCCe8y1tKfUezIRalvlDd9VbA
+Xnnze40a/BSHM6GwaFmrCuUk97oXMnV/xi6D7HbVq7qH30aH3yXSmzZr8zd9jl6r2rGh4f1vvLSL
+/Hx3dwu64SAlW7g1tHbLI0QZdKuUlnxjrDqiMp8dW3YI2RiVSupf2F9DkdZ5QBG1Bm5MyLTEKikI
+MADQoL3RXLdUT42vTPzqRl9xvlfW2hLAX6P3AgMBAAGjggRHMIIEQzAbBgsrBgEEAYLxNmYDAQQM
+DAowNzAzNzc3MDQ1MB4GCysGAQQBgvE2ZgMLBA8MDTA3MDM3NzcwNDUwMDEwgdcGCCsGAQUFBwEB
+BIHKMIHHMFUGCCsGAQUFBzAChklodHRwOi8vd3d3LnVhbmF0YWNhLmNvbS9wdWJsaWMvZG93bmxv
+YWQvdHNwX2NlcnRpZmljYXRlcy9zdWJvcmRpbmF0ZTEuY3J0MDYGCCsGAQUFBzABhipodHRwOi8v
+b2NzcDEudWFuYXRhY2EuY29tL3B1YmxpYy9wa2kvb2NzcC8wNgYIKwYBBQUHMAGGKmh0dHA6Ly9v
+Y3NwMi51YW5hdGFjYS5jb20vcHVibGljL3BraS9vY3NwLzAdBgNVHQ4EFgQUEY480/83Cf35YWGk
+sjeMutHD3AIwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBR9V+dgc84HRqnio2jw4RGydJJz/TCB
+mQYDVR0gBIGRMIGOMIGLBgwrBgEEAYLxNmYCAQEwezA3BggrBgEFBQcCARYraHR0cHM6Ly93d3cu
+dWFuYXRhY2EuY29tL3B1YmxpYy9wa2kvZHBjLWVjLzBABggrBgEFBQcCAjA0DDJDRVJUSUZJQ0FE
+TyBERSBQRVJTT05BIE5BVFVSQUwgTyBGSVNJQ0EgRU4gQVJDSElWTzCBjwYDVR0fBIGHMIGEMECg
+PqA8hjpodHRwOi8vY3JsMS51YW5hdGFjYS5jb20vcHVibGljL3BraS9jcmwvQ0Eyc3Vib3JkaW5h
+ZGEuY3JsMECgPqA8hjpodHRwOi8vY3JsMi51YW5hdGFjYS5jb20vcHVibGljL3BraS9jcmwvQ0Ey
+c3Vib3JkaW5hZGEuY3JsMA4GA1UdDwEB/wQEAwIF4DAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwQwggF9BgNVHREEggF0MIIBcIEbYXNlcnJpb3NhbnZpY2VudGVAZ21haWwuY29toBsGCysG
+AQQBgvE2ZgMBoAwMCjA3MDM3NzcwNDWgHgYLKwYBBAGC8TZmAwKgDwwNU0lMVklPIFlPVkFOSaAZ
+BgsrBgEEAYLxNmYDA6AKDAhBTFZBUkFET6AYBgsrBgEEAYLxNmYDBKAJDAdIVVJUQURPoCgGCysG
+AQQBgvE2ZgMHoBkMF1NOIENBUlJFVEVSQSBWSUEgQSBMT0pBoB8GCysGAQQBgvE2ZgMIoBAMDjAw
+NTkzOTYyNTIxMzc0oBoGCysGAQQBgvE2ZgMJoAsMCVBPUlRPVkVMT6AeBgsrBgEEAYLxNmYDC6AP
+DA0wNzAzNzc3MDQ1MDAxoBMGCysGAQQBgvE2ZgMMoAQMAkVDoCkGCysGAQQBgvE2ZgMyoBoMGFBF
+UlNPTkEgTkFUVVJBTCBPIEZJU0lDQaAYBgsrBgEEAYLxNmYDM6AJDAdBUkNISVZPMA0GCSqGSIb3
+DQEBCwUAA4ICAQCieciFMp8YdtPrqYW3qpr9l9d/YfVjVm3R08ZgjGCf7mcqY315sM2xACp3G0Zo
+mBpZztp+f2un/eOh/YP+MC/HyMsKmKVaU/59k5+MxRXRV6A8zOBhpmsqDiAjZ0hT1bPLDScC1jOR
+LUGhFupi/Wms9zKfl8O5a3402akvdRR8jgup4BD0vyVQ4lMZxis+oei3sQBmLFwNRLpWzPYdp4JS
+XCzyuP4BcpgpT//PSp9IBaC4u4uomVPaG/KqO4QoRqd+76KilUjDBKMKYRgmcZW/0T1bgSRaR3sD
+J8yn4/d+eLjRJZGeA+fqwpqWMEfLyX8RYDLobxNe5N5XYEy+AcJ4+28od6uQhEku7GomIhZm1ns+
+n4AdgxTBeUGjTnwWWcBNUwOA3CkBkNowqJrkpcWg6ky+JkPRKN4YLDtxYIdkzAiprR188TJ/pk9l
+8h25YW4ECN+1KLuVAXa3zIOziNYWGl9g7HJoyBjg49MUJttYVBcpSiSCcOkFTorlFJyE4jaBFR7C
+BSXCr7CR2Cnk2RcLRu7Lkt68bQxt9KDhXERzl2li6ovv9rUiFj4Z3VZHauwpfohJRrno+Yci/cav
+gaB5kIoY+ywaoWmuzzGhBPsMb0oZ2LYfvhs795nqVLzDIGq1E9XSnE5n7sxX/50tI1g1C4oYwvA0
+fIrfdHDR4iuylQ==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+5wmX7PIlIawgUSDjLGfHFH9jnZYS8BQtbqiDG0MQlFGNJpg6UwotoaRtw0IcFn1Y2RQNAxHO4RIB
+Eo0rXZciSpUK516uC6dNVbUe8RHPCUEG1ggJys9UZCWtekZHYX8r7wgnvMtbSn1HsyEWpb5Q3fVW
+wF5583uNGvwUhzOhsGhZqwrlJPe6FzJ1f8Yug+x21au6h99Gh98l0ps2a/M3fY5eq9qxoeH9b7y0
+i/x8d3cLuuEgJVu4NbR2yyNEGXSrlJZ8Y6w6ojKfHVt2CNkYlUrqX9hfQ5HWeUARtQZuTMi0xCop
+CDAA0KC90Vy3VE+Nr0z86kZfcb5X1toSwF+j9w==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature684296-Object109782"><etsi:QualifyingProperties Target="#Signature684296"><etsi:SignedProperties Id="Signature684296-SignedProperties858388"><etsi:SignedSignatureProperties><etsi:SigningTime>2025-01-06T14:04:30-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>1BSutRQRPliBXAtIy5qcXBvqWlA=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>2.5.4.97=#0c0f56415445532d413636373231343939,CN=UANATACA CA2 2016,OU=TSP-UANATACA,O=UANATACA S.A.,L=Barcelona (see current address at www.uanataca.com/address),C=ES</ds:X509IssuerName><ds:X509SerialNumber>5503274589325207415</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-735408"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

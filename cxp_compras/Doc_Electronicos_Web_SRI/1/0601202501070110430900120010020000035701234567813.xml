@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<factura id="comprobante" version="2.1.0">
+    <infoTributaria>
+        <ambiente>2</ambiente>
+        <tipoEmision>1</tipoEmision>
+        <razonSocial>JIMENEZ ASTUDILLO REY CLOTARIO</razonSocial>
+        <nombreComercial>REPUESTOS PARA MINERIA "JIMENEZ"</nombreComercial>
+        <ruc>0701104309001</ruc>
+        <claveAcceso>0601202501070110430900120010020000035701234567813</claveAcceso>
+        <codDoc>01</codDoc>
+        <estab>001</estab>
+        <ptoEmi>002</ptoEmi>
+        <secuencial>000003570</secuencial>
+        <dirMatriz>ROCAFUERTE E/NAPOLEON MERA Y 23 ABRIL</dirMatriz>
+        <agenteRetencion>1</agenteRetencion>
+    </infoTributaria>
+    <infoFactura>
+        <fechaEmision>06/01/2025</fechaEmision>
+        <dirEstablecimiento>ROCAFUERTE E/NAPOLEON MERA Y 23 ABRIL</dirEstablecimiento>
+        <obligadoContabilidad>SI</obligadoContabilidad>
+        <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+        <razonSocialComprador>BELORO CL</razonSocialComprador>
+        <identificacionComprador>0992529679001</identificacionComprador>
+        <direccionComprador>CDLA LOS JARDINES</direccionComprador>
+        <totalSinImpuestos>13841.28</totalSinImpuestos>
+        <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+        <totalImpuesto>
+            <codigo>2</codigo>
+            <codigoPorcentaje>4</codigoPorcentaje>
+            <baseImponible>13841.28</baseImponible>
+            <valor>2076.19</valor>
+        </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>15917.47</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+        <pago>
+            <formaPago>20</formaPago>
+            <total>15917.47</total>
+            <plazo>30.00</plazo>
+            <unidadTiempo>Días</unidadTiempo>
+        </pago>
+    </pagos>
+    <valorRetIva>0</valorRetIva>
+    <valorRetRenta>0</valorRetRenta>
+    </infoFactura>
+    <detalles>
+        <detalle>
+            <codigoPrincipal>YT27017</codigoPrincipal>
+            <codigoAuxiliar>YT27017</codigoAuxiliar>
+            <descripcion>AGUJA AGUA YT27 WATER TUBE # 17</descripcion>
+            <cantidad>50.0000</cantidad>
+            <precioUnitario>2.610000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>130.43</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>130.43</baseImponible>
+                    <valor>19.56</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27018</codigoPrincipal>
+            <codigoAuxiliar>YT27018</codigoAuxiliar>
+            <descripcion>AGUJA AIRE YT27-YT28-YT29 AIR TUBE ASSEMBLY # 18</descripcion>
+            <cantidad>50.0000</cantidad>
+            <precioUnitario>2.610000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>130.43</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>130.43</baseImponible>
+                    <valor>19.56</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27016</codigoPrincipal>
+            <codigoAuxiliar>YT27016</codigoAuxiliar>
+            <descripcion>CAUCHO AGUJA WATER TUBE SLEEVE # 16</descripcion>
+            <cantidad>50.0000</cantidad>
+            <precioUnitario>1.300000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>65.22</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>65.22</baseImponible>
+                    <valor>9.78</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27019</codigoPrincipal>
+            <codigoAuxiliar>YT27019</codigoAuxiliar>
+            <descripcion>CAUCHO PLATILLO YT27 AIR TUBE PAD # 19</descripcion>
+            <cantidad>50.0000</cantidad>
+            <precioUnitario>1.300000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>65.22</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>65.22</baseImponible>
+                    <valor>9.78</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 022</codigoPrincipal>
+            <codigoAuxiliar>PA 022</codigoAuxiliar>
+            <descripcion>CAUCHO NEGRO Yx-seal ring FT160 P.A #22</descripcion>
+            <cantidad>100.0000</cantidad>
+            <precioUnitario>2.610000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>260.87</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>260.87</baseImponible>
+                    <valor>39.13</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 023</codigoPrincipal>
+            <codigoAuxiliar>PA 023</codigoAuxiliar>
+            <descripcion>CAUCHO BLANCO SUPPORT RING YT27 P.A #23</descripcion>
+            <cantidad>50.0000</cantidad>
+            <precioUnitario>1.300000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>65.22</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>65.22</baseImponible>
+                    <valor>9.78</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27040</codigoPrincipal>
+            <codigoAuxiliar>YT27040</codigoAuxiliar>
+            <descripcion>CAUCHO VAL AIRE EXPANSION RING YT27 # 40</descripcion>
+            <cantidad>50.0000</cantidad>
+            <precioUnitario>1.090000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>54.35</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>54.35</baseImponible>
+                    <valor>8.15</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27061</codigoPrincipal>
+            <codigoAuxiliar>YT27061</codigoAuxiliar>
+            <descripcion>EXAGONO SHANK BUSHING YT27 # 61</descripcion>
+            <cantidad>40.0000</cantidad>
+            <precioUnitario>11.300000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>452.17</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>452.17</baseImponible>
+                    <valor>67.83</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27001</codigoPrincipal>
+            <codigoAuxiliar>YT27001</codigoAuxiliar>
+            <descripcion>AGARRADERA DERECHA RIGHT HANDLE # 1</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>5.650000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>169.57</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>169.57</baseImponible>
+                    <valor>25.44</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27003</codigoPrincipal>
+            <codigoAuxiliar>YT27003</codigoAuxiliar>
+            <descripcion>AGARRADERA IZQUIERDA LEFT  HANDLE # 3</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>9.130000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>273.91</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>273.91</baseImponible>
+                    <valor>41.09</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27005</codigoPrincipal>
+            <codigoAuxiliar>YT27005</codigoAuxiliar>
+            <descripcion>GATILLO AGARRDERAS TRIGGER  # 5</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>1.740000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>52.17</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>52.17</baseImponible>
+                    <valor>7.83</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27004</codigoPrincipal>
+            <codigoAuxiliar>YT27004</codigoAuxiliar>
+            <descripcion>PASADOR AGARRDERAS ELASTIC PIN # 4</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>1.300000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>39.13</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>39.13</baseImponible>
+                    <valor>5.87</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27002</codigoPrincipal>
+            <codigoAuxiliar>YT27002</codigoAuxiliar>
+            <descripcion>CAUCHO AGARRDERA SHOCKPROOF  HANDLE # 2</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>2.610000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>78.26</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>78.26</baseImponible>
+                    <valor>11.74</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27066</codigoPrincipal>
+            <codigoAuxiliar>YT27066</codigoAuxiliar>
+            <descripcion>MOQUILLO DRILL RETAINER  YT27-YT26 # 66</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>22.610000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>678.26</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>678.26</baseImponible>
+                    <valor>101.74</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27065</codigoPrincipal>
+            <codigoAuxiliar>YT27065</codigoAuxiliar>
+            <descripcion>PERNO MOQUILLO DRILL RETAINER BOLT YT27 # 65</descripcion>
+            <cantidad>60.0000</cantidad>
+            <precioUnitario>5.650000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>339.13</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>339.13</baseImponible>
+                    <valor>50.87</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27064</codigoPrincipal>
+            <codigoAuxiliar>YT27064</codigoAuxiliar>
+            <descripcion>SIMBRA MOQUILLODRILL RETAINER SPRING  YT27-YT26 # 64</descripcion>
+            <cantidad>60.0000</cantidad>
+            <precioUnitario>2.610000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>156.52</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>156.52</baseImponible>
+                    <valor>23.48</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>YT27063</codigoPrincipal>
+            <codigoAuxiliar>YT27063</codigoAuxiliar>
+            <descripcion>TUERCA MOQUILLO HEX LOCK NUT  YT27 # 63</descripcion>
+            <cantidad>60.0000</cantidad>
+            <precioUnitario>1.300000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>78.26</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>78.26</baseImponible>
+                    <valor>11.74</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>ORIN 111</codigoPrincipal>
+            <codigoAuxiliar>ORIN 111</codigoAuxiliar>
+            <descripcion>ORIN  # 111</descripcion>
+            <cantidad>100.0000</cantidad>
+            <precioUnitario>.870000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>86.96</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>86.96</baseImponible>
+                    <valor>13.04</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>CAU009</codigoPrincipal>
+            <codigoAuxiliar>CAU009</codigoAuxiliar>
+            <descripcion>CAUCHO PEQ PASE AIRE YT27 #71</descripcion>
+            <cantidad>100.0000</cantidad>
+            <precioUnitario>1.090000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>108.70</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>108.70</baseImponible>
+                    <valor>16.31</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 009</codigoPrincipal>
+            <codigoAuxiliar>PA 009</codigoAuxiliar>
+            <descripcion>CAUCHO GRAN VARILL  DOUBLE FT160 P.A #9</descripcion>
+            <cantidad>100.0000</cantidad>
+            <precioUnitario>1.300000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>130.43</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>130.43</baseImponible>
+                    <valor>19.56</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 027</codigoPrincipal>
+            <codigoAuxiliar>PA 027</codigoAuxiliar>
+            <descripcion>CABEZA  FRAME FT160 P.A # 27</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>45.220000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>1356.52</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>1356.52</baseImponible>
+                    <valor>203.48</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 001</codigoPrincipal>
+            <codigoAuxiliar>PA 001</codigoAuxiliar>
+            <descripcion>TUERCA  LOCKING NUT FT160 P.A #1</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>2.170000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>65.22</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>65.22</baseImponible>
+                    <valor>9.78</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 002</codigoPrincipal>
+            <codigoAuxiliar>PA 002</codigoAuxiliar>
+            <descripcion>ARANDELA PAD FT160 P.A #2</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>1.740000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>52.17</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>52.17</baseImponible>
+                    <valor>7.83</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 003</codigoPrincipal>
+            <codigoAuxiliar>PA 003</codigoAuxiliar>
+            <descripcion>CAUCHO GRUES RUBBER PAD YT27  P.A #3</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>1.740000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>52.17</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>52.17</baseImponible>
+                    <valor>7.83</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 004</codigoPrincipal>
+            <codigoAuxiliar>PA 004</codigoAuxiliar>
+            <descripcion>BOSIN LOCK SLEEVE FT160 P.A #4</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>2.610000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>78.26</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>78.26</baseImponible>
+                    <valor>11.74</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 005</codigoPrincipal>
+            <codigoAuxiliar>PA 005</codigoAuxiliar>
+            <descripcion>ORIN PEQU 1 YT27 P.A #5</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>.430000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>13.04</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>13.04</baseImponible>
+                    <valor>1.96</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 007</codigoPrincipal>
+            <codigoAuxiliar>PA 007</codigoAuxiliar>
+            <descripcion>ORIN GRAND 3 YT27 P.A #7</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>.430000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>13.04</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>13.04</baseImponible>
+                    <valor>1.96</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>PA 006</codigoPrincipal>
+            <codigoAuxiliar>PA 006</codigoAuxiliar>
+            <descripcion>ORIN MEDIAN 2 YT27 P.A  #6</descripcion>
+            <cantidad>30.0000</cantidad>
+            <precioUnitario>.430000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>13.04</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>13.04</baseImponible>
+                    <valor>1.96</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>LINTWISD01</codigoPrincipal>
+            <codigoAuxiliar>LINTWISD01</codigoAuxiliar>
+            <descripcion>LINTERNA WISDOM BATERIA KL5M</descripcion>
+            <cantidad>100.0000</cantidad>
+            <precioUnitario>58.260000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>5826.09</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>5826.09</baseImponible>
+                    <valor>873.91</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>MAG057</codigoPrincipal>
+            <codigoAuxiliar>MAG057</codigoAuxiliar>
+            <descripcion>MANG  MAX ITALY MAYA R2 NEGRA 2400 PSI 1"</descripcion>
+            <cantidad>200.0000</cantidad>
+            <precioUnitario>14.780000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>2956.52</precioTotalSinImpuesto>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>2956.52</baseImponible>
+                    <valor>443.48</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+    </detalles>
+    <infoAdicional>
+        <campoAdicional nombre="DIRECCION:">CDLA LOS JARDINES</campoAdicional>
+        <campoAdicional nombre="CORREO:">beloro.facturacion@grupodmg.ec</campoAdicional>
+        <campoAdicional nombre="Agente de Retención">No. Resolución: 1</campoAdicional>
+    </infoAdicional>
+<ds:Signature Id="Signature82883" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo Id="Signature-SignedInfo93505"><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><ds:Reference Id="SignedPropertiesID72763" URI="#Signature82883-SignedProperties57282" Type="http://uri.etsi.org/01903#SignedProperties"><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><ds:DigestValue>5+57Jtt/nzn4DAOvYqr+G319ZFQ=</ds:DigestValue></ds:Reference><ds:Reference URI="#Certificate82306"><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><ds:DigestValue>SmAqvrIPrZKro4l7qUwZcLWEomM=</ds:DigestValue></ds:Reference><ds:Reference Id="Reference-ID-70191" URI="#comprobante"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><ds:DigestValue>N6ds3jCYtRM5G+raAE8sxGwFZzw=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="SignatureValue62439">py7CqzZk4pedO9F2S6iC/UXN9VzEKUrit4TWBlRUndxq9NnMVC0h/KJsq6WICOOVXmvW/aefYZ9b
+Nv3tIPb/9PpeyZSqiZlx6DH7WiCiW+T229Si/FimlWGrHaUfeAKM6VJqK/+pr30BWgUqhFq2raic
+Y2ydB0pyKxzE5oQeoKQp5/PR2EWWh7AFzHIwwwVahLASFEI/yN86nU6Ud2NngXG6p9fMyOqBtIgo
++8hlq+4SjhEPmkhYZ+xj8KtdfAxC+RHfzUMwpYvCc5neqfMfM2MOgiJSsmOSe9/E9AsLTOsR6fwA
+cxoONSIC1to/ZxmR7UJAOrVhYg+iSq0QNteaUg==</ds:SignatureValue><ds:KeyInfo Id="Certificate82306"><ds:X509Data><ds:X509Certificate>MIIL7DCCCdSgAwIBAgIEQYXGNjANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMCRUMxHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAyMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04xOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTIgU0VDVVJJVFkgREFUQTAeFw0yNDAxMjcxNTE2MjVaFw0yNjAxMjYxNTE2MjVaMIGpMScw
+JQYDVQQDDB5SRVkgQ0xPVEFSSU8gSklNRU5FWiBBU1RVRElMTE8xIDAeBgNVBAUTFzA3MDExMDQz
+MDktMjcwMTI0MTAyNjExMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5G
+T1JNQUNJT04xHTAbBgNVBAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAyMQswCQYDVQQGEwJFQzCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMRiE2EI6b5pTHOH0Ktssf5WJyph0MOlB5HS6Ea6
+ITZtzuwfTQgXGADYfdr44uqoHXNBp7tWcAHaeJS0rElzzMt2c/EPh+r8A1V5/T829IKvWUa4xq+W
+NRnZHH+Q3IgMXJByYcF3qpfcP5Wsm+E6h8Q2bEJDBQeNqSrrcartycF1/4IHjU7cfupAROfXVQRI
+HCrstX3IGoYYvaxWaL2mXCArQtsY/qDH/7fD4tE/Io0WK6brhEOpgQlk+OWht5/536l+UW/4wQcj
+qBARtLnJJTFMlcT5ngf6TP+GfpiD5qXeUckFaVvU3W50+Gu2mVwvXHvbcuue3pnlAkJGka0fd10C
+AwEAAaOCBygwggckMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUjLrKEVd4JYAdawpLVb+NrmLd
+vY8wWQYIKwYBBQUHAQEETTBLMEkGCCsGAQUFBzABhj1odHRwOi8vb2NzcGd3LnNlY3VyaXR5ZGF0
+YS5uZXQuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9vY3NwMIHPBgNVHS4EgccwgcQwgcGggb6g
+gbuGgbhsZGFwOi8vbGRhcHNkY2EyLnNlY3VyaXR5ZGF0YS5uZXQuZWMvQ049QVVUT1JJREFEIERF
+IENFUlRJRklDQUNJT04gU1VCQ0EtMiBTRUNVUklUWSBEQVRBLE9VPUVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTixPPVNFQ1VSSVRZIERBVEEgUy5BLiAyLEM9RUM/ZGVsdGFS
+ZXZvY2F0aW9uTGlzdD9iYXNlMCUGA1UdEQQeMByBGnJleWppbWVuZXoyMDI0QG91dGxvb2suY29t
+MIIBBgYDVR0gBIH+MIH7MFoGCisGAQQBgqZyAgcwTDBKBggrBgEFBQcCAjA+HjwAQwBlAHIAdABp
+AGYAaQBjAGEAZABvACAAZABlACAAUABlAHIAcwBvAG4AYQAgAE4AYQB0AHUAcgBhAGwwgZwGCisG
+AQQBgqZyAgEwgY0wgYoGCCsGAQUFBwIBFn5odHRwczovL3d3dy5zZWN1cml0eWRhdGEubmV0LmVj
+L3dwLWNvbnRlbnQvZG93bmxvYWRzL05vcm1hdGl2YXMvUF9kZV9DZXJ0aWZpY2Fkb3MvUG9saXRp
+Y2FzIGRlIENlcnRpZmljYWRvIFBlcnNvbmEgTmF0dXJhbC5wZGYwggKiBgNVHR8EggKZMIIClTCB
+5aBBoD+GPWh0dHA6Ly9vY3NwZ3cuc2VjdXJpdHlkYXRhLm5ldC5lYy9lamJjYS9wdWJsaWN3ZWIv
+c3RhdHVzL29jc3CigZ+kgZwwgZkxOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9O
+IFNVQkNBLTIgU0VDVVJJVFkgREFUQTEwMC4GA1UECwwnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9O
+IERFIElORk9STUFDSU9OMR0wGwYDVQQKDBRTRUNVUklUWSBEQVRBIFMuQS4gMjELMAkGA1UEBhMC
+RUMwgceggcSggcGGgb5sZGFwOi8vbGRhcHNkY2EyLnNlY3VyaXR5ZGF0YS5uZXQuZWMvQ049QVVU
+T1JJREFEIERFIENFUlRJRklDQUNJT04gU1VCQ0EtMiBTRUNVUklUWSBEQVRBLE9VPUVOVElEQUQg
+REUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTixPPVNFQ1VSSVRZIERBVEEgUy5BLiAyLEM9
+RUM/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlMIHgoIHdoIHahoHXaHR0cHM6Ly9wb3J0
+YWwtb3BlcmFkb3IyLnNlY3VyaXR5ZGF0YS5uZXQuZWMvZWpiY2EvcHVibGljd2ViL3dlYmRpc3Qv
+Y2VydGRpc3Q/Y21kPWNybCZpc3N1ZXI9Q049QVVUT1JJREFEIERFIENFUlRJRklDQUNJT04gU1VC
+Q0EtMiBTRUNVUklUWSBEQVRBLE9VPUVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1B
+Q0lPTixPPVNFQ1VSSVRZIERBVEEgUy5BLiAyLEM9RUMwHQYDVR0OBBYEFBq89X+FNXljCYCuFLfP
+WktvelyTMCsGA1UdEAQkMCKADzIwMjQwMTI3MTUxNjI1WoEPMjAyNjAxMjYxNTE2MjVaMAsGA1Ud
+DwQEAwIF4DAaBgorBgEEAYKmcgMBBAwMCjA3MDExMDQzMDkwFwYKKwYBBAGCpnIDCQQJDAdNQUNI
+QUxBMBEGCisGAQQBgqZyAyIEAwwBLjA8BgorBgEEAYKmcgMHBC4MLFJPQ0FGVUVSVEUgUyBOIFkg
+MjMgREUgQUJSSUwgWSBOQVBPTEVPTiBNRVJBMBwGCisGAQQBgqZyAwIEDgwMUkVZIENMT1RBUklP
+MB8GCisGAQQBgqZyAyAEEQwPMDA2MDAxMDAwMDU3ODQwMBEGCisGAQQBgqZyAyMEAwwBLjATBgor
+BgEEAYKmcgMhBAUMA1BGWDAXBgorBgEEAYKmcgMMBAkMB0VDVUFET1IwFwYKKwYBBAGCpnIDAwQJ
+DAdKSU1FTkVaMBgGCisGAQQBgqZyAx4ECgwIRU1QTEVBRE8wHQYKKwYBBAGCpnIDCwQPDA0wNzAx
+MTA0MzA5MDAxMBEGCisGAQQBgqZyAx0EAwwBLjAZBgorBgEEAYKmcgMEBAsMCUFTVFVESUxMTzAQ
+BgorBgEEAYKmcgMIBAIMADANBgkqhkiG9w0BAQsFAAOCAgEArhlIPq6PCjmMLei+ZWhFkcc/mh4/
+wKNf2Bx79D18KhkN3kPGJKRa3KNDWyJDwzXp49KTY8uJBf14++1EKmL9ncx/q79euLE7eIHJPipS
+zRBXt77Jf8xmDYbtep834nyKPgMNd6LV8E3Br20j0uQ2ubBO1IsfnZffe8XWQv75NMRKZ9cXy91/
+Pnh9WQsSuNmuKRfRWASyXKXPhEA69EDNX9116mippLy2F/R2OyEkwXZ1NUtkkOiZ5nTBr/U/S8ax
+yhOM8fhe9lwrWaxHm59rDwW3MVVJrlUsIynCTFT6BnCuHG4JzCEygyzHdotmJGTR96jmQ7J0H6k6
+i/hSo3ovHnatiw3UFdZw9ilC/HhKR15Jr97BZDauw0H0eD1iy+icaxRa6480AoeXrgdBov0N623T
+KjIgOftcZ1eX5UrNo13/D76sAn1tXLimGflhOlugwxIhzBlCI+0w+rFwIjVoTuHzCqWtYD1cuKbr
+A4Ak5kGkhHkdjoidfDha94tYgJEwtquDWFKEb4IWH1Ok3j5KrRzYyg1BFXZ+0KGqLdHi3TCI+XXY
+aHZHjPIpBot054Tca6WAz014xZwTBYLjE50hbtb5JAmp8jeAoThX437CJgUoV1ypjAF0qSJrsiGm
+RRpVOc4wZka/Uj4QRrpkSdI4+KKEGLTWvgDeiR6vmKTG1qI=</ds:X509Certificate></ds:X509Data><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>xGITYQjpvmlMc4fQq2yx/lYnKmHQw6UHkdLoRrohNm3O7B9NCBcYANh92vji6qgdc0Gnu1ZwAdp4
+lLSsSXPMy3Zz8Q+H6vwDVXn9Pzb0gq9ZRrjGr5Y1Gdkcf5DciAxckHJhwXeql9w/layb4TqHxDZs
+QkMFB42pKutxqu3JwXX/ggeNTtx+6kBE59dVBEgcKuy1fcgahhi9rFZovaZcICtC2xj+oMf/t8Pi
+0T8ijRYrpuuEQ6mBCWT45aG3n/nfqX5Rb/jBByOoEBG0ucklMUyVxPmeB/pM/4Z+mIPmpd5RyQVp
+W9TdbnT4a7aZXC9ce9ty657emeUCQkaRrR93XQ==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue></ds:KeyInfo><ds:Object Id="Signature82883-Object63872"><etsi:QualifyingProperties Target="#Signature82883" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#"><etsi:SignedProperties Id="Signature82883-SignedProperties57282"><etsi:SignedSignatureProperties><etsi:SigningTime>2025-01-06T15:11:34-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><ds:DigestValue>3TKJMPMv+Ndf5Mvy4MEpXoo5ND0=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUBCA-2 SECURITY DATA, OU=ENTIDAD DE CERTIFICACION DE INFORMACION, O=SECURITY DATA S.A. 2, C=EC</ds:X509IssuerName><ds:X509SerialNumber>1099286070</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-70191"><etsi:Description>Servicios IT, Luis Orellana Escalante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

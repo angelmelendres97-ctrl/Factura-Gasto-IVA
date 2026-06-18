@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.1.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>IRRAMINTA SA</razonSocial><nombreComercial>IRRAMINTA SA</nombreComercial><ruc>1793199954001</ruc><claveAcceso>1708202401179319995400120061000000039231234567814</claveAcceso><codDoc>01</codDoc><estab>006</estab><ptoEmi>100</ptoEmi><secuencial>000003923</secuencial><dirMatriz>PICHINCHA / QUITO / CUMBAYA / AV PAMPITE S/N</dirMatriz></infoTributaria>
+  <infoFactura>
+    <fechaEmision>17/08/2024</fechaEmision>
+    <dirEstablecimiento>PICHINCHA / QUITO / CUMBAYA / AV PAMPITE S/N</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>MINERA BELORO C.L</razonSocialComprador>
+    <identificacionComprador>0992529679001</identificacionComprador>
+    <direccionComprador>AZUAY/CAMILO PONCE E./ CAMILO PONCE E./SITIO EL PARAISO VIA BELLA RICA</direccionComprador>
+    <totalSinImpuestos>1268.67</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>5</codigoPorcentaje>
+        <baseImponible>568.80</baseImponible>
+        <tarifa>5.00</tarifa>
+        <valor>28.44</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <baseImponible>699.87</baseImponible>
+        <tarifa>15.00</tarifa>
+        <valor>104.98</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>1402.09</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>1402.09</total>
+        <plazo>30</plazo>
+        <unidadTiempo>dias</unidadTiempo>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>BLQ102040</codigoPrincipal>
+      <codigoAuxiliar>BLQ102040</codigoAuxiliar>
+      <descripcion>BLOQUE 10x20x40</descripcion>
+      <cantidad>900.00</cantidad>
+      <precioUnitario>0.400000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>360.00</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>5</codigoPorcentaje>
+          <tarifa>5.00</tarifa>
+          <baseImponible>360.00</baseImponible>
+          <valor>18.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>LVC04212012000A000</codigoPrincipal>
+      <descripcion>VARILLA C MICROALEADA 42 12X12000 INEN 2167</descripcion>
+      <cantidad>10.00</cantidad>
+      <precioUnitario>14.260000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>142.60</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>5</codigoPorcentaje>
+          <tarifa>5.00</tarifa>
+          <baseImponible>142.60</baseImponible>
+          <valor>7.13</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>C-A-2</codigoPrincipal>
+      <codigoAuxiliar>4582383761403</codigoAuxiliar>
+      <descripcion>CLAVO ACERO 2 CAJA 500 GR</descripcion>
+      <cantidad>1.00</cantidad>
+      <precioUnitario>4.070000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>4.07</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>4.07</baseImponible>
+          <valor>0.61</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>3000030735</codigoPrincipal>
+      <descripcion>MALLA ELECTROS. D100 150X150</descripcion>
+      <cantidad>5.00</cantidad>
+      <precioUnitario>138.874900</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>694.37</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>694.37</baseImponible>
+          <valor>104.16</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>HBT818</codigoPrincipal>
+      <descripcion>BAILEJO 8 MANGO PLASTICO INDUSTRIAL INGCO</descripcion>
+      <cantidad>1.00</cantidad>
+      <precioUnitario>1.430000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1.43</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>1.43</baseImponible>
+          <valor>0.21</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>LVC04208012000A000</codigoPrincipal>
+      <descripcion>VARILLA C MICROALEADA 42 8X12000 INEN 2167</descripcion>
+      <cantidad>10.00</cantidad>
+      <precioUnitario>6.620000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>66.20</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>5</codigoPorcentaje>
+          <tarifa>5.00</tarifa>
+          <baseImponible>66.20</baseImponible>
+          <valor>3.31</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional><campoAdicional nombre="Nota">ASI15536</campoAdicional></infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature476081">
+<ds:SignedInfo Id="Signature-SignedInfo889490">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID832893" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature476081-SignedProperties170536">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>rKKoF7vEZhAv43cer9X9jq0nFkQ=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1319092">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>UX+m8GJ8aqTGN2w/5qT+NhqFjXQ=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-815377" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>sVrXDCZlewonK/uYYc3+U5cPG88=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue540655">
+ZkUXQ32r9R2+RL0rw8Rjv7Md4fhju5xRdnOfI5qTIZck8qA7cbTC+XyzyklpP8A2/cTvGISFam+H
+FSrS6yLW8mI2wNI/uCSi3Sp8WxbJHd1TJWPDNNuUXFC+ULap6hoynm2PyZtJu7DU/AMbEKWSyNnR
+LTIMd1WOZtcn35oT5caqmpUSLbTKNNCI2YoG4VlXh0yTppKbq7UGINFLesXigTFVPVuq3HQ5xhgf
+LrShxph0ZfCvfCeRLSjZPoEbo0WLr6y97J2wG8Tva+QyYDZVN3EFTr1OjLqkgVPA7UrqBZ6yVMEm
++GUvX+jMkfRTnZ9pEe/qz5HFBVmwUne5ogJy7A==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1319092">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIL5zCCCc+gAwIBAgIEFi6fEjANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMCRUMxHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAyMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04xOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTIgU0VDVVJJVFkgREFUQTAeFw0yMzExMDEyMTI2NDRaFw0yNTEwMzEyMTI2NDRaMIGfMSgw
+JgYDVQQDDB9EQU5JRUxBIExJWkJFVEggUEFMQUNJT1MgR1JBTkRBMRUwEwYDVQQFEwwwMTExMjMx
+NjM2MjIxMDAuBgNVBAsMJ0VOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTjEd
+MBsGA1UECgwUU0VDVVJJVFkgREFUQSBTLkEuIDIxCzAJBgNVBAYTAkVDMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEApjlsKfUMoA+IaCAk+lMUDZDOTaKKG5MYlqQcVQLMtpQZE18gKpz9
+AZUIe0SKf22R5i1XKPImZgXbwAC//OnFnlYKIuIW4ovR0eq4s3KBEWRr9b7oEHGNsDhozautjfoJ
+gOrxqD1y2dCv8PGH8q/EhseXauKA43qWdADUk2ztbyaG7PX9oMOOh6qSo0PtwybnmPHC0NphmlCE
+/XeVwOpEz5Z95B1uThdlOY+gExctcHuHHSqdII0yhzC9zndlc3c3fM1RFBDeLLAuT9dsf7fg65uu
+/HBdBSayPuy6XySmWEgtK6svYlh0QVSjxpPOw3OBhKxgxfFtHoEF2mZ5bqt9zQIDAQABo4IHLTCC
+BykwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBSMusoRV3glgB1rCktVv42uYt29jzBZBggrBgEF
+BQcBAQRNMEswSQYIKwYBBQUHMAGGPWh0dHA6Ly9vY3NwZ3cuc2VjdXJpdHlkYXRhLm5ldC5lYy9l
+amJjYS9wdWJsaWN3ZWIvc3RhdHVzL29jc3Awgc8GA1UdLgSBxzCBxDCBwaCBvqCBu4aBuGxkYXA6
+Ly9sZGFwc2RjYTIuc2VjdXJpdHlkYXRhLm5ldC5lYy9DTj1BVVRPUklEQUQgREUgQ0VSVElGSUNB
+Q0lPTiBTVUJDQS0yIFNFQ1VSSVRZIERBVEEsT1U9RU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERF
+IElORk9STUFDSU9OLE89U0VDVVJJVFkgREFUQSBTLkEuIDIsQz1FQz9kZWx0YVJldm9jYXRpb25M
+aXN0P2Jhc2UwJAYDVR0RBB0wG4EZamF5YWxhQHRlY25vdm9sYWR1cmFzLmNvbTCCARUGA1UdIASC
+AQwwggEIMGIGCisGAQQBgqZyAgkwVDBSBggrBgEFBQcCAjBGHkQAQwBlAHIAdABpAGYAaQBjAGEA
+ZABvACAAZABlACAAUgBlAHAAcgBlAHMAZQBuAHQAYQBuAHQAZQAgAEwAZQBnAGEAbDCBoQYKKwYB
+BAGCpnICAzCBkjCBjwYIKwYBBQUHAgEWgYJodHRwczovL3d3dy5zZWN1cml0eWRhdGEubmV0LmVj
+L3dwLWNvbnRlbnQvZG93bmxvYWRzL05vcm1hdGl2YXMvUF9kZV9DZXJ0aWZpY2Fkb3MvUG9saXRp
+Y2FzIGRlIENlcnRpZmljYWRvIFJlcHJlc2VudGFudGUgTGVnYWwucGRmMIICogYDVR0fBIICmTCC
+ApUwgeWgQaA/hj1odHRwOi8vb2NzcGd3LnNlY3VyaXR5ZGF0YS5uZXQuZWMvZWpiY2EvcHVibGlj
+d2ViL3N0YXR1cy9vY3NwooGfpIGcMIGZMTkwNwYDVQQDDDBBVVRPUklEQUQgREUgQ0VSVElGSUNB
+Q0lPTiBTVUJDQS0yIFNFQ1VSSVRZIERBVEExMDAuBgNVBAsMJ0VOVElEQUQgREUgQ0VSVElGSUNB
+Q0lPTiBERSBJTkZPUk1BQ0lPTjEdMBsGA1UECgwUU0VDVVJJVFkgREFUQSBTLkEuIDIxCzAJBgNV
+BAYTAkVDMIHHoIHEoIHBhoG+bGRhcDovL2xkYXBzZGNhMi5zZWN1cml0eWRhdGEubmV0LmVjL0NO
+PUFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNVQkNBLTIgU0VDVVJJVFkgREFUQSxPVT1FTlRJ
+REFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04sTz1TRUNVUklUWSBEQVRBIFMuQS4g
+MixDPUVDP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFzZTCB4KCB3aCB2oaB12h0dHBzOi8v
+cG9ydGFsLW9wZXJhZG9yMi5zZWN1cml0eWRhdGEubmV0LmVjL2VqYmNhL3B1YmxpY3dlYi93ZWJk
+aXN0L2NlcnRkaXN0P2NtZD1jcmwmaXNzdWVyPUNOPUFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9O
+IFNVQkNBLTIgU0VDVVJJVFkgREFUQSxPVT1FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5G
+T1JNQUNJT04sTz1TRUNVUklUWSBEQVRBIFMuQS4gMixDPUVDMB0GA1UdDgQWBBQtOEWhTNW+ke08
+EBd47Xsp5iTv2DArBgNVHRAEJDAigA8yMDIzMTEwMTIxMjY0NFqBDzIwMjUxMDMxMjEyNjQ0WjAL
+BgNVHQ8EBAMCBeAwFwYKKwYBBAGCpnIDBQQJDAdHRVJFTlRFMBoGCisGAQQBgqZyAwEEDAwKMTEw
+NDg3MTM4NzAVBgorBgEEAYKmcgMJBAcMBVFVSVRPMBEGCisGAQQBgqZyAyIEAwwBLjAeBgorBgEE
+AYKmcgMHBBAMDkFWIFBBTVBJVEUgUyBOMB8GCisGAQQBgqZyAwIEEQwPREFOSUVMQSBMSVpCRVRI
+MB8GCisGAQQBgqZyAyAEEQwPMDAyMDAxMDAwNzAzMzMwMBMGCisGAQQBgqZyAyEEBQwDUEZYMBcG
+CisGAQQBgqZyAwwECQwHRUNVQURPUjAYBgorBgEEAYKmcgMDBAoMCFBBTEFDSU9TMB0GCisGAQQB
+gqZyAwoEDwwNSVJSQU1JTlRBIFMgQTAdBgorBgEEAYKmcgMLBA8MDTE3OTMxOTk5NTQwMDEwEgYK
+KwYBBAGCpnIDHQQEDAJObzAWBgorBgEEAYKmcgMEBAgMBkdSQU5EQTAaBgorBgEEAYKmcgMIBAwM
+CjA5ODQ2Mzc3NzMwDQYJKoZIhvcNAQELBQADggIBAIXv+6UXv0LqukVDFDt8asNfrjhJcUi7w3iT
+oWSQ1T+kLu1U/My+mlE+YOpIdOorZHe8SJSr065brEOycrnUcxKubxxeY273zaKyGIP9uGZ7BFr2
+MB8ygybjGrzowyzdbbQOwYptjKyb/fCZlfIuyBpLMnbn14rl++A8mb0Cj26BlI+IrKZSOw0DeIUg
+wNOOfSoCt+JycNw1wginp2ZiLzTyTbcFZ3YHTujVKq3/Aq1HOwKIIh6KLEkdjWwIMH8/j4qTHoY4
+0i9kTkwaIJUhvAJC5MnTtyQLUrxi57IiNwlDlqiG7iqQHldNXPQBCcNnbkI5YAAJwJy8LYLUSmwJ
+1yjJCbHz8MssBIVo7wuRBW5x/sB9teDAv/eeAyxqtLkHtGpzDLEd6dgn+IyzytV/4ug4MEXyY4dM
+dsIfqFrCUxeDU6Gx7ivftYNoW5pvvBDldXMuPDNWAJpwhcNdueCaqUjrJeHBrIwsb/w3c22e+1O9
+wvtbr4qdJwZiPIv8cT0AbFrDb2O9B2iBtPgwNclaPeunTly/oX39N2JrL5AzL0baYBQnkp9erT54
+tU0kzuzUbLQj6XND4qBIyB5/qxexMJSNSHlHMrYERbkDZ8jwfi1kpe3NIoYeItFWoxm46FWIZcYT
+/+DW61Jku5C+jo6OUOcdxIve18LxDovcl2J3dm9n
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+pjlsKfUMoA+IaCAk+lMUDZDOTaKKG5MYlqQcVQLMtpQZE18gKpz9AZUIe0SKf22R5i1XKPImZgXb
+wAC//OnFnlYKIuIW4ovR0eq4s3KBEWRr9b7oEHGNsDhozautjfoJgOrxqD1y2dCv8PGH8q/EhseX
+auKA43qWdADUk2ztbyaG7PX9oMOOh6qSo0PtwybnmPHC0NphmlCE/XeVwOpEz5Z95B1uThdlOY+g
+ExctcHuHHSqdII0yhzC9zndlc3c3fM1RFBDeLLAuT9dsf7fg65uu/HBdBSayPuy6XySmWEgtK6sv
+Ylh0QVSjxpPOw3OBhKxgxfFtHoEF2mZ5bqt9zQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature476081-Object545249"><etsi:QualifyingProperties Target="#Signature476081"><etsi:SignedProperties Id="Signature476081-SignedProperties170536"><etsi:SignedSignatureProperties><etsi:SigningTime>2024-08-17T08:49:45-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>aOx1j0DmGCbr+2QB3TZsSB1wrow=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUBCA-2 SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A. 2,C=EC</ds:X509IssuerName><ds:X509SerialNumber>372154130</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-815377"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

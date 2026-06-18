@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="2.1.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>ERAZO CELI GONZALO FERNANDO</razonSocial><nombreComercial>ESTACION DE SERVICIO GASEL</nombreComercial><ruc>1103563894001</ruc><claveAcceso>1008202401110356389400120021040000323950000000110</claveAcceso><codDoc>01</codDoc><estab>002</estab><ptoEmi>104</ptoEmi><secuencial>000032395</secuencial><dirMatriz>AV. ALONSO DE MERCADILLO SN Y CLOTARIO PIEDRA</dirMatriz></infoTributaria><infoFactura><fechaEmision>10/08/2024</fechaEmision><dirEstablecimiento>AV JAIME ROLDOS AGUILERA Y TUNGURAGUA</dirEstablecimiento><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>OROCONCENT SA</razonSocialComprador><identificacionComprador>0791750962001</identificacionComprador><direccionComprador>EL TABLONA 100 MTS CANCHA BAR</direccionComprador><totalSinImpuestos>21.74</totalSinImpuestos><totalSubsidio>10.57</totalSubsidio><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>4</codigoPorcentaje><baseImponible>21.74</baseImponible><valor>3.26</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>25.00</importeTotal><moneda>DOLAR</moneda><placa>OBB9423</placa><pagos><pago><formaPago>16</formaPago><total>25.00</total><plazo>0</plazo><unidadTiempo>dias</unidadTiempo></pago></pagos></infoFactura><detalles><detalle><codigoPrincipal>0121      </codigoPrincipal><codigoAuxiliar>0121      </codigoAuxiliar><descripcion>DIESEL PREMIUM</descripcion><cantidad>13.912</cantidad><precioUnitario>1.562609</precioUnitario><precioSinSubsidio>2.322565</precioSinSubsidio><descuento>0.00</descuento><precioTotalSinImpuesto>21.74</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>4</codigoPorcentaje><tarifa>15</tarifa><baseImponible>21.74</baseImponible><valor>3.26</valor></impuesto></impuestos></detalle></detalles><infoAdicional><campoAdicional nombre="Vendedor">DD0000003</campoAdicional><campoAdicional nombre="Detalle">Surti:04-A MANG:03</campoAdicional><campoAdicional nombre="Direccion">EL TABLONA 100 MTS CANCHA BAR</campoAdicional><campoAdicional nombre="EMail">GONFERCEL@HOTMAIL.COM, valdiviezolaurabelen@gmail.com</campoAdicional><campoAdicional nombre="Sodinfo">Facturacion Electronica</campoAdicional><campoAdicional nombre="Sodinfo">Facturacion Electronica</campoAdicional></infoAdicional><ds:Signature Id="Signature695522" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#">
+<ds:SignedInfo Id="Signature-SignedInfo951285">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID279921" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature695522-SignedProperties525303">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>wAmB0HKkavOlwHe5rVSwIfWfj58=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1320215">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>rCR5/q5kAqcayPZSOYQIAEfqkrw=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-62429" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>KFg4e/UC1jqnbs9Fs2xpo1yNzN8=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue343262">
+XgcqVjwitOvL/zx6K1KZzrMy2qCKeKznmmuWXx8odu8ANdMM4GHKag2K1n/FGMV7ka3qWMZNbBsR
+y6fTbGNzmNAw5iwdf2Er2bS1TJVWaaBxLuhyWY4q83zicX9rL45BYR3tq05HOK8QUwstMGhjulp7
+ZLk57XNH3wVJ2or+Xs/I/yuuq9ArZqjh4OzWYFSEpVh8jb6FuUR10mE7/L9wQafwFRYUjeTLif4V
+QH558cWDF57ziW0rZrenRP+8OC3h7StjGrlm/fYt53GF6i25sCtZLtZfXSFdSre5dhVBdmWhAmf5
+mcgRRyEsgiUjdZ/H+ESYRpqETWw4TuUXUDqPkA==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1320215">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJZjCCB06gAwIBAgIIMDDMZH0IeXUwDQYJKoZIhvcNAQELBQAwgbgxCzAJBgNVBAYTAkVTMUQw
+QgYDVQQHDDtCYXJjZWxvbmEgKHNlZSBjdXJyZW50IGFkZHJlc3MgYXQgd3d3LnVhbmF0YWNhLmNv
+bS9hZGRyZXNzKTEWMBQGA1UECgwNVUFOQVRBQ0EgUy5BLjEVMBMGA1UECwwMVFNQLVVBTkFUQUNB
+MRowGAYDVQQDDBFVQU5BVEFDQSBDQTIgMjAxNjEYMBYGA1UEYQwPVkFURVMtQTY2NzIxNDk5MB4X
+DTI0MDIyNjIwMzgwMFoXDTI2MDIyNTIwMzgwMFowgZwxCzAJBgNVBAYTAkVDMRMwEQYDVQQEDApF
+UkFaTyBDRUxJMRkwFwYDVQQqDBBHT05aQUxPIEZFUk5BTkRPMRkwFwYDVQQFExBJRENFQy0xMTAz
+NTYzODk0MSQwIgYDVQQDDBtHT05aQUxPIEZFUk5BTkRPIEVSQVpPIENFTEkxHDAaBgNVBGEME1RJ
+TkVDLTExMDM1NjM4OTQwMDEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCA5/eSbpw7
+7QIKTDIgqqNo802oM679vz3vkHrVe61oKigBEq1TvFSaK1jjrbIY19MuVAmSIr5IWDdjTjzyW9w2
+Fg2Z7i41C0+v/R6IueK79H08i8UKtuAOLi8Uqk4tmYFilkf5KKBDRgZI/7cPDvXdd4EJXRb0OU8c
+ZcjRmQ3hmEN4htMEeGF2hdZVO3PF64J19ZBprXsqMGOlUATnXDxN7mE2udngshp8CZLXycRaO9a3
+18RIauSymyCBnlUCLvNYMJZguwafKeMDMxOMK6dfpMhpkOpY5BxNxi1+ZxhL/A4OdBtjJuy85d5k
+ByeFf0xKnjFfMzJkz1ven+QbnKSHAgMBAAGjggSMMIIEiDAbBgsrBgEEAYLxNmYDAQQMDAoxMTAz
+NTYzODk0MB4GCysGAQQBgvE2ZgMLBA8MDTExMDM1NjM4OTQwMDEwgdcGCCsGAQUFBwEBBIHKMIHH
+MFUGCCsGAQUFBzAChklodHRwOi8vd3d3LnVhbmF0YWNhLmNvbS9wdWJsaWMvZG93bmxvYWQvdHNw
+X2NlcnRpZmljYXRlcy9zdWJvcmRpbmF0ZTEuY3J0MDYGCCsGAQUFBzABhipodHRwOi8vb2NzcDEu
+dWFuYXRhY2EuY29tL3B1YmxpYy9wa2kvb2NzcC8wNgYIKwYBBQUHMAGGKmh0dHA6Ly9vY3NwMi51
+YW5hdGFjYS5jb20vcHVibGljL3BraS9vY3NwLzAdBgNVHQ4EFgQUu5rVag3AQnyPWGNRjwen9mS5
+MLIwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBR9V+dgc84HRqnio2jw4RGydJJz/TCBmQYDVR0g
+BIGRMIGOMIGLBgwrBgEEAYLxNmYCAQEwezA3BggrBgEFBQcCARYraHR0cHM6Ly93d3cudWFuYXRh
+Y2EuY29tL3B1YmxpYy9wa2kvZHBjLWVjLzBABggrBgEFBQcCAjA0DDJDRVJUSUZJQ0FETyBERSBQ
+RVJTT05BIE5BVFVSQUwgTyBGSVNJQ0EgRU4gQVJDSElWTzCBjwYDVR0fBIGHMIGEMECgPqA8hjpo
+dHRwOi8vY3JsMS51YW5hdGFjYS5jb20vcHVibGljL3BraS9jcmwvQ0Eyc3Vib3JkaW5hZGEuY3Js
+MECgPqA8hjpodHRwOi8vY3JsMi51YW5hdGFjYS5jb20vcHVibGljL3BraS9jcmwvQ0Eyc3Vib3Jk
+aW5hZGEuY3JsMA4GA1UdDwEB/wQEAwIF4DAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQw
+ggHCBgNVHREEggG5MIIBtYEbc2lnbmFyc29sdWNpb25lczNAZ21haWwuY29toBsGCysGAQQBgvE2
+ZgMBoAwMCjExMDM1NjM4OTSgIQYLKwYBBAGC8TZmAwKgEgwQR09OWkFMTyBGRVJOQU5ET6AWBgsr
+BgEEAYLxNmYDA6AHDAVFUkFaT6AVBgsrBgEEAYLxNmYDBKAGDARDRUxJoHMGCysGAQQBgvE2ZgMH
+oGQMYkNBTExFOiBBVi4gQUxPTlNPIERFIE1FUkNBRElMTE8gTk1FUk86IFNOIElOVEVSU0VDQ0lO
+OiBDTE9UQVJJTyBQSUVEUkEgUkVGRVJFTkNJQTogRlJFTlRFIEEgTEEgQU5UoB8GCysGAQQBgvE2
+ZgMIoBAMDjAwNTkzOTgxMjY4MDgzoBcGCysGAQQBgvE2ZgMJoAgMBlpBTU9SQaAeBgsrBgEEAYLx
+NmYDC6APDA0xMTAzNTYzODk0MDAxoBMGCysGAQQBgvE2ZgMMoAQMAkVDoCkGCysGAQQBgvE2ZgMy
+oBoMGFBFUlNPTkEgTkFUVVJBTCBPIEZJU0lDQaAYBgsrBgEEAYLxNmYDM6AJDAdBUkNISVZPMA0G
+CSqGSIb3DQEBCwUAA4ICAQBHVd5ObS2mlVlwAzQYnHzdi2ZkjxnKPQAEu5L4o6fvclyHNpDHvivp
+duvAAB0RZ8o6N5fmOVfmpV0a0JYczCjsCPi5yN9XEFoPH2FKco90BVvS8a1PZ1/6blF6o7Q61VTD
+NqnnbvamogDjprw7UhSF2+SBnAO7kFxgrO9GzEOgGVxfZkpbuTkN5xiBjt+Frek9A4LRzwkF3cD9
+vkQt3WRr2E2A9YG53pWlfytrFhgM4f1lLPNqB4s/wutYnAdg340mgki+meGw5xL4XaBzFgdy4Vio
+XwNiyV+NuEpMmXDmzV7k5moOworyQiamPSXe+ifAlXC0OjfyCN6fLelmqdL5e93HpTVZTfqyoDBm
+/O8dIcM0pCWSB0VSzMTkf2Hp52DorgwDq8/vFQax8zsSx3cpfrzKcCtCrbtOjUhln9EF7fqZARZO
+oEVMM/pvISyHqfgyzpdWWzZ/1wBJw+i664qi0fc3NTJdkOow4H1zdoSddta+iTRgXqThYbB7l4gU
+Nvau1n2e47/YrxXxGGaps7+3pPuUbaluYQ74DvEzAxLYm8K1zbKZZkgL3utoB0gFRXxndCREquD3
+w4syuNWgp7FqZQHYhZXdOp5G6BzRSb5CRaU2c/ufjUoKaVYIO8JTBM1hqvXudu+rb/qXEolK6rRs
+OBm8EnAyPBwPOcpKfN8c6Q==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+gOf3km6cO+0CCkwyIKqjaPNNqDOu/b8975B61XutaCooARKtU7xUmitY462yGNfTLlQJkiK+SFg3
+Y0488lvcNhYNme4uNQtPr/0eiLniu/R9PIvFCrbgDi4vFKpOLZmBYpZH+SigQ0YGSP+3Dw713XeB
+CV0W9DlPHGXI0ZkN4ZhDeIbTBHhhdoXWVTtzxeuCdfWQaa17KjBjpVAE51w8Te5hNrnZ4LIafAmS
+18nEWjvWt9fESGrkspsggZ5VAi7zWDCWYLsGnynjAzMTjCunX6TIaZDqWOQcTcYtfmcYS/wODnQb
+YybsvOXeZAcnhX9MSp4xXzMyZM9b3p/kG5ykhw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature695522-Object57498"><etsi:QualifyingProperties Target="#Signature695522"><etsi:SignedProperties Id="Signature695522-SignedProperties525303"><etsi:SignedSignatureProperties><etsi:SigningTime>2024-08-10T00:30:40-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>wiHBR9pI9oSSdQICA/7LqS0lGko=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>2.5.4.97=#0c0f56415445532d413636373231343939,CN=UANATACA CA2 2016,OU=TSP-UANATACA,O=UANATACA S.A.,L=Barcelona (see current address at www.uanataca.com/address),C=ES</ds:X509IssuerName><ds:X509SerialNumber>3472500044669155701</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-62429"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

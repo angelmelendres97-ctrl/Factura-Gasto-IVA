@@ -1,0 +1,4 @@
+
+
+alter table saeminv add minv_nom_clpv varchar(255);
+alter table saeminv add minv_ruc_clpv varchar(50);

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.0.0">
+    <infoTributaria>
+        <ambiente>2</ambiente>
+        <tipoEmision>1</tipoEmision>
+        <razonSocial>SEPEREM C LTDA</razonSocial>
+        <nombreComercial>SEPEREM C LTDA</nombreComercial>
+        <ruc>0791745632001</ruc>
+        <claveAcceso>3009202401079174563200120010010000008941234567814</claveAcceso>
+        <codDoc>01</codDoc>
+        <estab>001</estab>
+        <ptoEmi>001</ptoEmi>
+        <secuencial>000000894</secuencial>
+        <dirMatriz>GUAYAQUIL S/N Y GUABO</dirMatriz>
+        <agenteRetencion>01</agenteRetencion>
+    </infoTributaria>
+    <infoFactura>
+        <fechaEmision>30/09/2024</fechaEmision>
+        <dirEstablecimiento>GUAYAQUIL S/N Y GUABO</dirEstablecimiento>
+        <obligadoContabilidad>SI</obligadoContabilidad>
+        <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+        <razonSocialComprador>MINERA BELORO CL</razonSocialComprador>
+        <identificacionComprador>0992529679001</identificacionComprador>
+        <direccionComprador>GUAYAQUIL Y QUINTA NORTE</direccionComprador>
+        <totalSinImpuestos>7577.86</totalSinImpuestos>
+        <totalDescuento>0.00</totalDescuento>
+        <totalConImpuestos>
+            <totalImpuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>4</codigoPorcentaje>
+                <baseImponible>7577.86</baseImponible>
+                <tarifa>15.00</tarifa>
+                <valor>1136.68</valor>
+            </totalImpuesto>
+        </totalConImpuestos>
+        <propina>0.00</propina>
+        <importeTotal>8714.54</importeTotal>
+        <moneda>DOLAR</moneda>
+        <pagos>
+            <pago>
+                <formaPago>20</formaPago>
+                <total>8714.54</total>
+            </pago>
+        </pagos>
+    </infoFactura>
+    <detalles>
+        <detalle>
+            <codigoPrincipal>SERV 001</codigoPrincipal>
+            <codigoAuxiliar>SERV 001</codigoAuxiliar>
+            <descripcion>SEGURIDAD INTEGRAL</descripcion>
+            <cantidad>1</cantidad>
+            <precioUnitario>7577.86</precioUnitario>
+            <descuento>0</descuento>
+            <precioTotalSinImpuesto>7577.86</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="AJUSTE SERVICIO" valor="AJUSTE SERVICIO"></detAdicional>
+                <detAdicional nombre="MES DE" valor="MES DE"></detAdicional>
+                <detAdicional nombre="SEPTIEMBRE 2024" valor="SEPTIEMBRE 2024"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>4</codigoPorcentaje>
+                    <tarifa>15.00</tarifa>
+                    <baseImponible>7577.86</baseImponible>
+                    <valor>1136.68</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+    </detalles>
+    <infoAdicional>
+        <campoAdicional nombre="Dirección">GUAYAQUIL Y QUINTA NORTE</campoAdicional>
+        <campoAdicional nombre="Teléfono">072937375 ext. 113</campoAdicional>
+        <campoAdicional nombre="Email">fernanda.paccha@grupoadmg.com</campoAdicional>
+    </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature895528">
+<ds:SignedInfo Id="Signature-SignedInfo664788">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod>
+<ds:Reference Id="SignedPropertiesID811248" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature895528-SignedProperties478734">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>Qd80y0dp87W34kRmYW58OC4uKME=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1472913">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>dc4L+sFP+Q6LBBVoBYqY2rhowQk=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-496543" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>By7eMJ46tedvzxt0mZlcH3D9qj4=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue389023">
+PUCewBI7YxbIDXtdvTxQwsgqGERhb8vkDnYXUq0XguZe21NV33DBzvE4PnzHqVcdYLIlOgKvSF5M
+WYqCooGDjRHNaQl+sfWvKzBalcgVG2DO4gdy8OFk4tALbR4v4vNapNYOyoNqsJiutvdavmVu71qJ
+pA2akDF4U5zX0zoYEF3S5vU6xuhP3Z8T4FTSN1x/F7v+O4vY9LtvCjbN6CzIUFnJmQ61jFTzl4fC
+fvBmZZB0c7QfbCNW7SGvFR1cbyEjwIbJmaQePu0WVewMtmzh9ANSRIaEzOuOIONrf2En2oGr1rnq
+K4/MhFUv4qtM+u+5bC1kQf8FhUxPLyVJnRBtyg==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1472913">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJ5jCCB86gAwIBAgIEW28yEzANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTIyMTAyNDE0MDg1MloXDTI0MTAyNDE0Mzg1
+MlowgbYxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE6MBEGA1UEBRMKMDAwMDMxODkzODAlBgNVBAMTHlJPTEFORE8gU0lNT04g
+Q0FTVElMTE8gU0FMSU5BUzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJoQn39/hbO5
+YRZX+M4wD7SzWNvs6cd+juMf/ugQLBasLtLmxJ3sGGNXkqkh3zYPNsbuNgdqCFnSkfs3qPfBdRg9
++Va2oiuyyBEQbnGlQU14N4x+MdmenE6UFDOilGnJzOti7DZ7Ivt/ZVjldMGPZUgd3aggOeG6wSfH
+FkgZ+j1wuPKCUFNlHGze9YPLnA0eB8Dw2sYwMzerkv21Us3TxEL4GQBSqYFSnD8mNG9ufjEcqWl5
+x7R0wRpt+B9xjGyZ9tnANwK6WBbXOGMVBo4+MlYU3DHiUePxQFYeEcWbj/udKojQZrdVW8AI8gww
+VKCEAxFYdzVADkZbbLRImWCMue8CAwEAAaOCBQ0wggUJMAsGA1UdDwQEAwIHgDBnBgNVHSAEYDBe
+MFwGCysGAQQBgqg7AgIBME0wSwYIKwYBBQUHAgEWP2h0dHA6Ly93d3cuZWNpLmJjZS5lYy9wb2xp
+dGljYS1jZXJ0aWZpY2Fkby9wZXJzb25hLWp1cmlkaWNhLnBkZjCBkQYIKwYBBQUHAQEEgYQwgYEw
+PgYIKwYBBQUHMAGGMmh0dHA6Ly9vY3NwLmVjaS5iY2UuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1
+cy9vY3NwMD8GCCsGAQUFBzABhjNodHRwOi8vb2NzcDEuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3
+ZWIvc3RhdHVzL29jc3AwHgYKKwYBBAGCqDsDCgQQEw5TRVBFUkVNIEMgTFREQTAdBgorBgEEAYKo
+OwMLBA8TDTA3OTE3NDU2MzIwMDEwGgYKKwYBBAGCqDsDAQQMEwoxMTA0MjA4MjY3MB0GCisGAQQB
+gqg7AwIEDxMNUk9MQU5ETyBTSU1PTjAYBgorBgEEAYKoOwMDBAoTCENBU1RJTExPMBcGCisGAQQB
+gqg7AwQECRMHU0FMSU5BUzAfBgorBgEEAYKoOwMFBBETD0dFUkVOVEUgR0VORVJBTDAhBgorBgEE
+AYKoOwMHBBMTEUdVQVlBUVVJTCBZIEdVQUJPMBkGCisGAQQBgqg7AwgECxMJMDcyOTUyMjQxMBcG
+CisGAQQBgqg7AwkECRMHTWFjaGFsYTAXBgorBgEEAYKoOwMMBAkTB0VDVUFET1IwHgYKKwYBBAGC
+qDsDMwQQEw5IQVJEV0FSRS1UT0tFTjAnBgNVHREEIDAegRxqZW5uaWZlcjA1MDYyMDA5QGhvdG1h
+aWwuY29tMIIB4QYDVR0fBIIB2DCCAdQwggHQoIIBzKCCAciGgdZsZGFwOi8vYmNlcWxkYXBzdWJw
+MS5iY2UuZWMvY249Q1JMMTU5Nixjbj1BQyUyMEJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFE
+T1IsbD1RVUlUTyxvdT1FTlRJREFEJTIwREUlMjBDRVJUSUZJQ0FDSU9OJTIwREUlMjBJTkZPUk1B
+Q0lPTi1FQ0lCQ0Usbz1CQU5DTyUyMENFTlRSQUwlMjBERUwlMjBFQ1VBRE9SLGM9RUM/Y2VydGlm
+aWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlhjRodHRwOi8vd3d3LmVjaS5iY2UuZWMvQ1JML2VjaV9i
+Y2VfZWNfY3JsZmlsZWNvbWIuY3JspIG2MIGzMQswCQYDVQQGEwJFQzEiMCAGA1UEChMZQkFOQ08g
+Q0VOVFJBTCBERUwgRUNVQURPUjE3MDUGA1UECxMuRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERF
+IElORk9STUFDSU9OLUVDSUJDRTEOMAwGA1UEBxMFUVVJVE8xJTAjBgNVBAMTHEFDIEJBTkNPIENF
+TlRSQUwgREVMIEVDVUFET1IxEDAOBgNVBAMTB0NSTDE1OTYwKwYDVR0QBCQwIoAPMjAyMjEwMjQx
+NDA4NTJagQ8yMDI0MTAyNDE0Mzg1MlowHwYDVR0jBBgwFoAUSKLfIx8d+CxReowDzUkypQnBlKsw
+HQYDVR0OBBYEFI0/W/AuAQ+CECXNtwnVbOLHPGyaMAkGA1UdEwQCMAAwGQYJKoZIhvZ9B0EABAww
+ChsEVjguMQMCBLAwDQYJKoZIhvcNAQELBQADggIBAH8e00iyi2A1rAZ1QzTLkqB4bhMYWcUleYP0
+82OLPT9CReHrEK9CmPg74PbqHWh0F9fynkRFpnOjFxrO3IjzA9lLJOdSC1kG7Aau5U5/iOM4TmDj
+SQ5XZZFwM5AClg8p+CGdxtrNkfCh9qF7bWVVVfkJKLZ6i5Scyy2svXL9vGON/LSU46AW7jVXzpfq
+hvY40o4jUn85n53DqY3MSQ3V6T6KrFfWu+JfEy8xj1gMxJ/7Vvn2dN93lfH1JrzTPGCFeFyTKf0J
+5DX+9dYKKIUqVhDiuL+qpHQ4TOA71DkFt31nlxqYdg1sTAycYChjm/PexrmoWkB5JCaHB04Sn5Xw
+G33qhbNiRK2Yl+EdIJnPZbq4utJwNfUvb6Sh7z8k0xSzn8UNWmqR1UrgngTnP3xgpbStZUUxhx3h
+Fj8zvUpUJjHdDAl4Zau3zZzHb//ZIYuLKngHMdZbynsrKTE2vS7S0w0ZSehkM3M8PgXWODSeaIzk
+wQQM7WUEDzH8KEBSfBDP1D9sEO7jg34m6FxNMFwMOnEpGpIIZbAS4YsywvM6hudS5xMSRUewAAIK
+/6Z58jGT7FiXqaddhmqs1Mg+zZ9tl+hTObdfcK1xoXR3t2scXdmq007T7M5E8CjmH3fsLoiI1JeF
+Oyny6ewbMUW5i5kbv25lK2TXBmJ9kOSDd1tRIZWZ
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+mhCff3+Fs7lhFlf4zjAPtLNY2+zpx36O4x/+6BAsFqwu0ubEnewYY1eSqSHfNg82xu42B2oIWdKR
++zeo98F1GD35VraiK7LIERBucaVBTXg3jH4x2Z6cTpQUM6KUacnM62LsNnsi+39lWOV0wY9lSB3d
+qCA54brBJ8cWSBn6PXC48oJQU2UcbN71g8ucDR4HwPDaxjAzN6uS/bVSzdPEQvgZAFKpgVKcPyY0
+b25+MRypaXnHtHTBGm34H3GMbJn22cA3ArpYFtc4YxUGjj4yVhTcMeJR4/FAVh4RxZuP+50qiNBm
+t1VbwAjyDDBUoIQDEVh3NUAORltstEiZYIy57w==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature895528-Object167825"><etsi:QualifyingProperties Target="#Signature895528"><etsi:SignedProperties Id="Signature895528-SignedProperties478734"><etsi:SignedSignatureProperties><etsi:SigningTime>2024-10-02T15:59:35-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>ZJrW0UFVpbJqsW+ZJCiD/pa6wuM=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1534013971</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-496543"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id="comprobante" version="1.0.0">  <infoTributaria>    <ambiente>2</ambiente>    <tipoEmision>1</tipoEmision>    <razonSocial>SUSANA MARITZA VELASQUEZ CHALEN</razonSocial>    <nombreComercial>NOTARIA SEGUNDA - EL ORO - ZARUMA</nombreComercial>    <ruc>0701893356001</ruc>    <claveAcceso>0208202401070189335600120010020000258840000222312</claveAcceso>    <codDoc>01</codDoc>    <estab>001</estab>    <ptoEmi>002</ptoEmi>    <secuencial>000025884</secuencial>    <dirMatriz>AVENIDA REINALDO ESPINOZA - FRENTE AL ANTIGUO LEA</dirMatriz>  </infoTributaria>  <infoFactura>    <fechaEmision>02/08/2024</fechaEmision>    <obligadoContabilidad>NO</obligadoContabilidad>    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>    <razonSocialComprador>OROCONCENT S A</razonSocialComprador>    <identificacionComprador>0791750962001</identificacionComprador>    <direccionComprador>MACHALA</direccionComprador>    <totalSinImpuestos>51.47</totalSinImpuestos>    <totalDescuento>0</totalDescuento>    <totalConImpuestos>      <totalImpuesto>        <codigo>2</codigo>        <codigoPorcentaje>4</codigoPorcentaje>        <descuentoAdicional>0</descuentoAdicional>        <baseImponible>50.87</baseImponible>        <valor>7.63</valor>      </totalImpuesto>      <totalImpuesto>        <codigo>2</codigo>        <codigoPorcentaje>0</codigoPorcentaje>        <descuentoAdicional>0</descuentoAdicional>        <baseImponible>0.60</baseImponible>        <valor>0</valor>      </totalImpuesto>    </totalConImpuestos>    <propina>0</propina>    <importeTotal>59.10</importeTotal>    <moneda>DOLAR</moneda>    <pagos>      <pago>        <formaPago>01</formaPago>        <total>59.10</total>      </pago>    </pagos>  </infoFactura>  <detalles>    <detalle>      <codigoPrincipal>520</codigoPrincipal>      <codigoAuxiliar>502</codigoAuxiliar>      <descripcion>(13) CERTIFICACIÓN DE DOCUMENTOS EXHIBIDOS EN ORIGINALES O COPIAS CERTIFICADAS (D)</descripcion>      <cantidad>1</cantidad>      <precioUnitario>23.27</precioUnitario>      <descuento>0</descuento>      <precioTotalSinImpuesto>23.27</precioTotalSinImpuesto>      <impuestos>        <impuesto>          <codigo>2</codigo>          <codigoPorcentaje>4</codigoPorcentaje>          <tarifa>15.00</tarifa>          <baseImponible>23.27</baseImponible>          <valor>3.49</valor>        </impuesto>      </impuestos>    </detalle>    <detalle>      <codigoPrincipal>520</codigoPrincipal>      <codigoAuxiliar>626</codigoAuxiliar>      <descripcion>(2) RECONOCIMIENTO DE FIRMAS</descripcion>      <cantidad>1</cantidad>      <precioUnitario>27.60</precioUnitario>      <descuento>0</descuento>      <precioTotalSinImpuesto>27.60</precioTotalSinImpuesto>      <impuestos>        <impuesto>          <codigo>2</codigo>          <codigoPorcentaje>4</codigoPorcentaje>          <tarifa>15.00</tarifa>          <baseImponible>27.60</baseImponible>          <valor>4.14</valor>        </impuesto>      </impuestos>    </detalle>    <detalle>      <codigoPrincipal>520</codigoPrincipal>      <codigoAuxiliar>429</codigoAuxiliar>      <descripcion>(2) CONSULTA DATOS BIOMETRICOS  SISTEMA NACIONAL DE IDENTIFICACIÓN CIUDADANA -  REGISTRO CIVIL (D)</descripcion>      <cantidad>1</cantidad>      <precioUnitario>0.60</precioUnitario>      <descuento>0</descuento>      <precioTotalSinImpuesto>0.60</precioTotalSinImpuesto>      <impuestos>        <impuesto>          <codigo>2</codigo>          <codigoPorcentaje>0</codigoPorcentaje>          <tarifa>0.00</tarifa>          <baseImponible>0.60</baseImponible>          <valor>0</valor>        </impuesto>      </impuestos>    </detalle>  </detalles>  <infoAdicional>    <campoAdicional nombre="Matrizador">SUSANA MARITZA VELASQUEZ CHALEN</campoAdicional>    <campoAdicional nombre="NÚMERO DE LIBRO">20240713002D00433</campoAdicional>    <campoAdicional nombre="Email Cliente">jennifer05062009@hotmail.com</campoAdicional>  </infoAdicional><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature308567">
+<ds:SignedInfo Id="Signature-SignedInfo789488">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod>
+<ds:Reference Id="SignedPropertiesID625588" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature308567-SignedProperties457572">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>6FcFERzvGp/UxyVVBJ62M6xlv+o=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate169270">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>EI1HNuqSk6sjYWVh34Pjm3WjSxQ=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-59823" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>kuHgidylGzmPvVg0s7UJUfdhuAY=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue474146">
+K6D7r0EI8d7jTze1d1liCLECPtOL8S8AbbVPEMhOIauo/LPUbQWCSOurvCvedCKVci2zGieXndCB
+Pd00dj+jOWj9B244ZET4SNBAf2jRWAQUZGoTXg970wB4sP1+eZjPtqCW03Wpgh1RW7xNyBelZm2U
+0+gf4+WU0cOJtQvneO4hmo48f2bxYYJc9MWpFpjxzamZl5ijthfh47rUEiKiHgXgjO6arf9LNgPP
+WhfxnyGCwxJbm2moC9Hzt4wEFSBn6BT5cnnXtXY1v2BjXd38A1qfHSfMs/rFeQpZMi36lwRYiEFw
+U0p5tBXMcStwkVq6N59F8If9rONtcij0ZSbD7w==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate169270">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIIXzCCBkegAwIBAgIIZZTlhNI+4H8wDQYJKoZIhvcNAQELBQAwgbUxCzAJBgNVBAYTAkVDMREw
+DwYDVQQHDAhETSBRVUlUTzEhMB8GA1UECgwYQ09OU0VKTyBERSBMQSBKVURJQ0FUVVJBMUQwQgYD
+VQQLDDtTVUJESVJFQ0NJT04gTkFDSU9OQUwgREUgU0VHVVJJREFEIERFIExBIElORk9STUFDSU9O
+IEROVElDUzEqMCgGA1UEAwwhRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIElDRVJULUVDMB4XDTIy
+MTIxNDE5MDE1M1oXDTI0MTIxNDE5MDE1M1owgYcxCzAJBgNVBAYTAkVDMSgwJgYDVQQKEx9TVVNB
+TkEgTUFSSVRaQSBWRUxBU1FVRVogQ0hBTEVOMQ8wDQYDVQQHEwZaQVJVTUExEzARBgNVBAUTCjA3
+MDUwMDY5ODkxKDAmBgNVBAMTH01FUkNFREVTIEVMSVpBQkVUSCBHQVJDSUEgTUFDQVMwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCVh5AvExyD/1W5/SlFnKgdzbnmIWuzqqBB/mWEB6pU
+OZGpk+WB9WFsH/E1DF8PBMrYarENkEFojVF1KO1n/xKw57cnH5gCQMaa/VsCWcPrgHtK/6ZX+EQI
+chTg6TwL6ixAYDzdwj+cekIeXInIeuN8aO6FlvldnoxMljumMoC79hcMhhX9tkurwB3h1eqo/5O8
+5jqEczxmY4gxJI5hEXl+CSb6snl633HCnmT7OeDjjqsc5exsOl1FfZkoZ6l7oc0PvAXRoEkNPt37
+68XIlzM4iU+BsODHBNrgX60TuSet/+1iPobAsjTAEc7PXHnYb7ANc1YWMzuEVtqdFdp8DvyFAgMB
+AAGjggOdMIIDmTCCAjEGA1UdEQSCAigwggIkgSNub3RhcmlhZWxvcm96YXJ1bWFzZWd1bmRhQGdt
+YWlsLmNvbaAbBgsrBgEEAYLVYQEDAaAMDAowNzA1MDA2OTg5oCMGCysGAQQBgtVhAQMCoBQMEk1F
+UkNFREVTIEVMSVpBQkVUSKAXBgsrBgEEAYLVYQEDA6AIDAZHQVJDSUGgFgYLKwYBBAGC1WEBAwSg
+BwwFTUFDQVOgJQYLKwYBBAGC1WEBAwWgFgwUQVNJU1RFTlRFIERFIE5PVEFSSUGgKwYLKwYBBAGC
+1WEBAwegHAwaIEFWRU5JREEgUkVJTkFMRE8gRVNQSU5PWkGgHgYLKwYBBAGC1WEBAwigDwwNKzU5
+Mzk4ODkxMzY0MKAXBgsrBgEEAYLVYQEDCaAIDAZaQVJVTUGgMAYLKwYBBAGC1WEBAwqgIQwfU1VT
+QU5BIE1BUklUWkEgVkVMQVNRVUVaIENIQUxFTqAeBgsrBgEEAYLVYQEDC6APDA0wNzAxODkzMzU2
+MDAxoBgGCysGAQQBgtVhAQMMoAkMB0VDVUFET1KgIwYLKwYBBAGC1WEBAzKgFAwSTUlFTUJSTyBE
+RSBFTVBSRVNBoCAGCysGAQQBgtVhAQMzoBEMD0FSQ0hJVk8gUEtDUyMxMqAeBgsrBgEEAYLVYQED
+NKAPDA0wNzAxODkzMzU2MDAxoCoGCysGAQQBgtVhAQM2oBsMGU5PVEFSSUEgU0VHVU5EQSBERSBa
+QVJVTUEwCQYDVR0TBAIwADAfBgNVHSMEGDAWgBQvInr4Xm2UjmpAFDfHbmty6TrCPzA4BggrBgEF
+BQcBAQQsMCowKAYIKwYBBQUHMAGGHGh0dHA6Ly9vY3NwLmljZXJ0LmZqZS5nb2IuZWMwcgYDVR0g
+BGswaTBnBg4rBgEEAYLVYQECAQQCATBVMFMGCCsGAQUFBwIBFkdodHRwOi8vd3d3LmljZXJ0LmZq
+ZS5nb2IuZWMvZHBjL2RlY2xhcmFjaW9uX3ByYWN0aWNhc19jZXJ0aWZpY2FjaW9uLnBkZjAdBgNV
+HSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL3d3dy5p
+Y2VydC5mamUuZ29iLmVjL2NybC9pY2VydC5jcmwwHQYDVR0OBBYEFBYWMBP3i8OigqjhI/GMzb9y
+M4TAMA4GA1UdDwEB/wQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAe8ttFuxbPG+GQktz6ZeE4IQm
+JGxkCkhZYr00Q9xwI9fYgpjemltGtrYV4LwQPQvln5dxfGijO8QzCTOPX88Yc40IO5XWDfd43m+y
+a71wJv67kTffttQrZrxhgzRhko5G+zBjjStAzzzFNd67T31QORZ8IPPuPQ4YbonwFReyFewvi8Ui
+pLxWWndsxAwnz9XmhTsE46/zx0U0nrTf2teo9v/OGI1uVxSoRN56QTINMcCXkQOIm0HIrxUNswf+
+s6kY6S7G0AIOguk9ZZd4gQkCfSsJqLsSe9Ews+0wmbQEHJ6+ekGZ/XCOmPyJyjLbIEe+/HLPRPq0
+beXSwK0WFwP0fcnaxLwFeNlLtNaJ9rMupL++R7l/iC1tsh6lBoLY5RQMhF37zIyG8ZhgeqSaFQlB
+rSwWowAaVPlyz/Rl4pd7pwQHtVsg904FkQZ1Xm1Xy3IW+esh2iGjhYc78qJZ0pBVwQRZGPr4wK8m
+KA3HwVJCpXz8E6rzeU/RWGjHGtr10al47AQDBLiV71iSPQ9kq5btfjCCTsUhe1dniXWAAVPtnzgh
+RT1lN2sIFW57vdJjhIqiuad6MhZOWI8o5tqNkNOSfgV21bob3Pt10Od/vBCrWpt42PhttZed4J+N
+PgXJVcNCLx9K/u3Jlw7iTXyubeihrNBm1f0Oa5d/76E4HxM3Z+8=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+lYeQLxMcg/9Vuf0pRZyoHc255iFrs6qgQf5lhAeqVDmRqZPlgfVhbB/xNQxfDwTK2GqxDZBBaI1R
+dSjtZ/8SsOe3Jx+YAkDGmv1bAlnD64B7Sv+mV/hECHIU4Ok8C+osQGA83cI/nHpCHlyJyHrjfGju
+hZb5XZ6MTJY7pjKAu/YXDIYV/bZLq8Ad4dXqqP+TvOY6hHM8ZmOIMSSOYRF5fgkm+rJ5et9xwp5k
++zng446rHOXsbDpdRX2ZKGepe6HND7wF0aBJDT7d++vFyJczOIlPgbDgxwTa4F+tE7knrf/tYj6G
+wLI0wBHOz1x52G+wDXNWFjM7hFbanRXafA78hQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature308567-Object45168"><etsi:QualifyingProperties Target="#Signature308567"><etsi:SignedProperties Id="Signature308567-SignedProperties457572"><etsi:SignedSignatureProperties><etsi:SigningTime>2024-08-02T10:45:32-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>vKISdIy5TX503HXuuIzmegYk0rs=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=ENTIDAD DE CERTIFICACION ICERT-EC, OU=SUBDIRECCION NACIONAL DE SEGURIDAD DE LA INFORMACION DNTICS, O=CONSEJO DE LA JUDICATURA, L=DM QUITO, C=EC</ds:X509IssuerName><ds:X509SerialNumber>7319727653009678463</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-59823"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura version="1.1.0" id="comprobante">
+
+<infoTributaria>
+<ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>METALURGICA MEJIA MEJIALOG CIA LTDA</razonSocial><nombreComercial>METALURGICA MEJIA MEJIALOG CIA LTDA</nombreComercial><ruc>0190486192001</ruc><claveAcceso>2110202401019048619200120010020000010520000105218</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>002</ptoEmi><secuencial>000001052</secuencial><dirMatriz>PASEO MILCHICHIG 2-131 Y AV. ESPAÑA A 3 CUADRAS DE PUENTE MILCHICHIG</dirMatriz><agenteRetencion>1</agenteRetencion></infoTributaria><infoFactura>
+<fechaEmision>21/10/2024</fechaEmision><dirEstablecimiento>PASEO MILCHICHIG 2-131 Y AV. ESPAÑA A 3 CUADRAS DE PUENTE MILCHICHIG</dirEstablecimiento><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>OROCONCENT S.A.</razonSocialComprador><identificacionComprador>0791750962001</identificacionComprador><totalSinImpuestos>1420.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos>
+<totalImpuesto>
+<codigo>2</codigo><codigoPorcentaje>4</codigoPorcentaje><baseImponible>1420.00</baseImponible><valor>213.00</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>1633.00</importeTotal><moneda>DOLAR</moneda><pagos>
+<pago>
+<formaPago>20</formaPago><total>1633.00</total><plazo>8</plazo><unidadTiempo>dias</unidadTiempo></pago></pagos></infoFactura><detalles>
+<detalle>
+<codigoPrincipal>2269</codigoPrincipal><descripcion>VOLANTE DE 18&quot;</descripcion><cantidad>1.00</cantidad><precioUnitario>390.000000</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>390.00</precioTotalSinImpuesto><impuestos>
+<impuesto>
+<codigo>2</codigo><codigoPorcentaje>4</codigoPorcentaje><tarifa>15.00</tarifa><baseImponible>390.00</baseImponible><valor>58.50</valor></impuesto></impuestos></detalle><detalle>
+<codigoPrincipal>2266</codigoPrincipal><descripcion>VOLANTE DE 16&quot; LISA</descripcion><cantidad>1.00</cantidad><precioUnitario>320.000000</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>320.00</precioTotalSinImpuesto><impuestos>
+<impuesto>
+<codigo>2</codigo><codigoPorcentaje>4</codigoPorcentaje><tarifa>15.00</tarifa><baseImponible>320.00</baseImponible><valor>48.00</valor></impuesto></impuestos></detalle><detalle>
+<codigoPrincipal>2267</codigoPrincipal><descripcion>VOLANTE DE 18&quot; PARA BANDAS TIPO C</descripcion><cantidad>1.00</cantidad><precioUnitario>390.000000</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>390.00</precioTotalSinImpuesto><impuestos>
+<impuesto>
+<codigo>2</codigo><codigoPorcentaje>4</codigoPorcentaje><tarifa>15.00</tarifa><baseImponible>390.00</baseImponible><valor>58.50</valor></impuesto></impuestos></detalle><detalle>
+<codigoPrincipal>2265</codigoPrincipal><descripcion>VOLANTE DE 16 &quot; PARA 3 BANDAS TIPO B</descripcion><cantidad>1.00</cantidad><precioUnitario>320.000000</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>320.00</precioTotalSinImpuesto><impuestos>
+<impuesto>
+<codigo>2</codigo><codigoPorcentaje>4</codigoPorcentaje><tarifa>15.00</tarifa><baseImponible>320.00</baseImponible><valor>48.00</valor></impuesto></impuestos></detalle></detalles><infoAdicional>
+<campoAdicional nombre="Dirección">TABLON</campoAdicional><campoAdicional nombre="Teléfono">3083808</campoAdicional><campoAdicional nombre="Email">administracion@oroconcent.com.ec</campoAdicional><campoAdicional nombre="Vencimiento">29/10/2024</campoAdicional><campoAdicional nombre="FormaPago">Crédito 8 Dias</campoAdicional></infoAdicional><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Id="SignatureN0"><ds:SignedInfo Id="Signature-SignedInfo379688"><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod><ds:Reference Id="SignedPropertiesID429911" Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignatureN0-SignedPropertiesN0"><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>b+FxpjRwLtiUoS3OH2FKU8fd7as=</ds:DigestValue></ds:Reference><ds:Reference URI="#CertificateN0"><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>wiZA4frtfZIr0LwFavOyum33WI0=</ds:DigestValue></ds:Reference><ds:Reference Id="Reference-ID-N0" URI="#comprobante"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>RamnEbgqDbnYExAZlDVPjEqzG6s=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="SignatureValueN0">KbJNgLzoKylT1Qf0O6ttrU5V0fx52czJMVNmh5qzgbIuyVLegrC7WGORiAHhS8Ojbts4IHun4ocFAZ4Z/JrdKdzOfb/ZefXPwTvH6c2fo8r/kkUC1a463ub4KI5E5a0WBKKwZSbUpG5SMdAff7ZIcNBChkWVyzMXykZ+yJpkryqMzQPzwRP3kBVvj/RWWw5ZbDeJCL9tOthhxjom1x7L2jLb5QG5yVwYBvbjejgVmLQqnEuxFxFEZkMeX0RboFYso4DUdiF5XD+hoXfamAaUn+6vXHbzSnj+E7aMyr4xPm+pqL0zLBQLsz1uAjwlgYHHZ2c2XCM5GMIKfpihf/S0KQ==</ds:SignatureValue><ds:KeyInfo Id="CertificateN0"><ds:X509Data><ds:X509Certificate>MIIJxDCCB6ygAwIBAgIIVa3jqgBzsuAwDQYJKoZIhvcNAQELBQAwgbgxCzAJBgNV
+BAYTAkVTMUQwQgYDVQQHDDtCYXJjZWxvbmEgKHNlZSBjdXJyZW50IGFkZHJlc3Mg
+YXQgd3d3LnVhbmF0YWNhLmNvbS9hZGRyZXNzKTEWMBQGA1UECgwNVUFOQVRBQ0Eg
+Uy5BLjEVMBMGA1UECwwMVFNQLVVBTkFUQUNBMRowGAYDVQQDDBFVQU5BVEFDQSBD
+QTIgMjAxNjEYMBYGA1UEYQwPVkFURVMtQTY2NzIxNDk5MB4XDTI0MDEyOTIyMzgw
+MFoXDTI3MDEyODIyMzgwMFowgewxCzAJBgNVBAYTAkVDMS4wLAYDVQQKDCVNRVRB
+TFVSR0lDQSBNRUpJQSBNRUpJQUxPRyBDSUEuIExUREEuMRgwFgYDVQQMDA9HRVJF
+TlRFIEdFTkVSQUwxFjAUBgNVBAQMDU1FSklBIFFVRVpBREExGTAXBgNVBCoMEEdF
+T1ZBTk5ZIEVEVUFSRE8xGTAXBgNVBAUTEElEQ0VDLTAxMDM3OTU3NzkxJzAlBgNV
+BAMMHkdFT1ZBTk5ZIEVEVUFSRE8gTUVKSUEgUVVFWkFEQTEcMBoGA1UEYQwTVkFU
+RUMtMDE5MDQ4NjE5MjAwMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AItyMBoXeKfmNQu+P9lwKU+V2Vp6l3iRh4MaDn+v7uRM5og5CafvFqL+d5NuNyvw
+CRelzHsEYhswcCQ6boyG4sFcCP6Y60H0v8/g39oK7qbOdD5KpBjrNwmJH2lFP4+2
+jAhtb2LpYtWSKZfUkTYfw8QQjeRfzzoTt9GDIupTQYiYX5q1aPi6eyTz6L5o01Yj
+FqxYh+bdhx+JtOD68PPlOGBbVCPw8S38a4VM17JrSrcnKFEarV77H1UvWspyCvnh
+WqWb1QjYcggZ/gNRSMr2Ay3fzu8d6b1Dj9lxULDfyYQbz+v0/2ICNqJqd//Lwj6l
+Gu/gOnuOYHswAqYiSoqSQJsCAwEAAaOCBJowggSWMBsGCysGAQQBgvE2ZgMBBAwM
+CjAxMDM3OTU3NzkwHgYLKwYBBAGC8TZmAwsEDwwNMDE5MDQ4NjE5MjAwMTCB1wYI
+KwYBBQUHAQEEgcowgccwVQYIKwYBBQUHMAKGSWh0dHA6Ly93d3cudWFuYXRhY2Eu
+Y29tL3B1YmxpYy9kb3dubG9hZC90c3BfY2VydGlmaWNhdGVzL3N1Ym9yZGluYXRl
+MS5jcnQwNgYIKwYBBQUHMAGGKmh0dHA6Ly9vY3NwMS51YW5hdGFjYS5jb20vcHVi
+bGljL3BraS9vY3NwLzA2BggrBgEFBQcwAYYqaHR0cDovL29jc3AyLnVhbmF0YWNh
+LmNvbS9wdWJsaWMvcGtpL29jc3AvMB0GA1UdDgQWBBSn8bgk4Pd8fayFzxMb3Xbv
+DmuJATAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFH1X52BzzgdGqeKjaPDhEbJ0
+knP9MIGOBgNVHSAEgYYwgYMwgYAGDCsGAQQBgvE2ZgIDATBwMDcGCCsGAQUFBwIB
+FitodHRwczovL3d3dy51YW5hdGFjYS5jb20vcHVibGljL3BraS9kcGMtZWMvMDUG
+CCsGAQUFBwICMCkMJ0NFUlRJRklDQURPIERFIFJFUFJFU0VOVEFOVEUgRU4gQVJD
+SElWTzCBjwYDVR0fBIGHMIGEMECgPqA8hjpodHRwOi8vY3JsMS51YW5hdGFjYS5j
+b20vcHVibGljL3BraS9jcmwvQ0Eyc3Vib3JkaW5hZGEuY3JsMECgPqA8hjpodHRw
+Oi8vY3JsMi51YW5hdGFjYS5jb20vcHVibGljL3BraS9jcmwvQ0Eyc3Vib3JkaW5h
+ZGEuY3JsMA4GA1UdDwEB/wQEAwIF4DAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwQwggHbBgNVHREEggHSMIIBzoEcbWV0YWx1cmdpY2FtZWppYUBob3RtYWls
+LmNvbaAbBgsrBgEEAYLxNmYDAaAMDAowMTAzNzk1Nzc5oCEGCysGAQQBgvE2ZgMC
+oBIMEEdFT1ZBTk5ZIEVEVUFSRE+gFgYLKwYBBAGC8TZmAwOgBwwFTUVKSUGgGAYL
+KwYBBAGC8TZmAwSgCQwHUVVFWkFEQaAgBgsrBgEEAYLxNmYDBaARDA9HRVJFTlRF
+IEdFTkVSQUygMwYLKwYBBAGC8TZmAwegJAwiUEFTRU8gTUlMQ0hJQ0hJRyAyLTEz
+MSBZIEFWLiBFU1BBQaAfBgsrBgEEAYLxNmYDCKAQDA4wMDU5Mzk5ODY3MjAwMaAX
+BgsrBgEEAYLxNmYDCaAIDAZDVUVOQ0GgNgYLKwYBBAGC8TZmAwqgJwwlTUVUQUxV
+UkdJQ0EgTUVKSUEgTUVKSUFMT0cgQ0lBLiBMVERBLqAeBgsrBgEEAYLxNmYDC6AP
+DA0wMTkwNDg2MTkyMDAxoBMGCysGAQQBgvE2ZgMMoAQMAkVDoCQGCysGAQQBgvE2
+ZgMyoBUME1JFUFJFU0VOVEFOVEUgTEVHQUygGAYLKwYBBAGC8TZmAzOgCQwHQVJD
+SElWTzANBgkqhkiG9w0BAQsFAAOCAgEAPpM+iwhHs65YsCStHAy+onmoLJ9ZtX3E
++3LE9EX+pTLVr5t1yvFUGLmSh5RNtliWyQMwFw1UIsqahfbHKfsNKfG33l9jLN2L
+ixeXkIUn+MD/8t/jhhl4CFSXuUy4IvHlAMGl7ZVngbBcw7s9P6O9ivuBMJfXUuVM
+JGFbXcIFYt0EHQB3yYFlX7/4eiuRMuhcmJQxTQ5Ij2TpDocGM6fJGaKm4z/HfZ1P
+843mx4iuT31nIi7Bmn8TuTOoQoSYtLcX5Fd7KF5YTEYVwaWU8PAAakIza7ezgVT4
+D7l4L0m3WjIRsle6XT8PuXvirNpzVBoQrBtxEChowYUxxpmTeuiKaCC7sP2ixcp7
+o6JbZIleQTBUY92S1nsaE1WK4/2G6XoYzH09q5dejr6PXBsNcUdS2iej4fDv/cfx
+/PGQVYxMfYfxvqeRQo43BwO7PeDfSI+K4ldJFwWGDjG2lqz5KWpBGZBvDmtuQoE6
+JGRj8toy1TAg/WLFFlMI0F/zqSQq8Pcw3mKxlJaSI8hjJPOklaV+P27LLfk7APS3
+QriIVgwzCQuZsamlUAuqceLZeZ28D3YqRYsedfCrJueeoKYFdkzmOLm6+i1wvIFG
+4gxQLCG1KDf6Ix2pnBZmEXO1hgX+r7UtlJTJwoFi7nUPPhbhGmJVQSrBHs4sIGyQ
+Uv6WpxREGUY=</ds:X509Certificate></ds:X509Data><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>i3IwGhd4p+Y1C74/2XApT5XZWnqXeJGHgxoOf6/u5EzmiDkJp+8Wov53k243K/AJF6XMewRiGzBwJDpujIbiwVwI/pjrQfS/z+Df2grups50PkqkGOs3CYkfaUU/j7aMCG1vYuli1ZIpl9SRNh/DxBCN5F/POhO30YMi6lNBiJhfmrVo+Lp7JPPovmjTViMWrFiH5t2HH4m04Prw8+U4YFtUI/DxLfxrhUzXsmtKtycoURqtXvsfVS9aynIK+eFapZvVCNhyCBn+A1FIyvYDLd/O7x3pvUOP2XFQsN/JhBvP6/T/YgI2omp3/8vCPqUa7+A6e45gezACpiJKipJAmw==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue></ds:KeyInfo><ds:Object Id="SignatureN0-ObjectN0"><xades:QualifyingProperties Target="#SignatureN0"><xades:SignedProperties Id="SignatureN0-SignedPropertiesN0"><xades:SignedSignatureProperties><xades:SigningTime>2024-10-21T14:47:44</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>XkFVRmHjQhxtQOFWW8QLROImwK0=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>2.5.4.97=VATES-A66721499,CN=UANATACA CA2 2016,OU=TSP-UANATACA,O=UANATACA S.A.,L=Barcelona (see current address at www.uanataca.com/address),C=ES</ds:X509IssuerName><ds:X509SerialNumber>6173840983486345952</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Reference-ID-N0"><xades:Description>contenido comprobante</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></factura>
