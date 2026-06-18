@@ -57,3 +57,29 @@ select  orpr_sec_orpr, orpr_cod_orpr   from saeorpr where
 						bode_cod_clpv = 12 )
 				order by 2;
 
+
+-- IVA multiple por factura de proveedor
+CREATE TABLE IF NOT EXISTS `saefprv_iva_det` (
+  `fiva_id` BIGINT NOT NULL AUTO_INCREMENT,
+  `fiva_cod_empr` INT NOT NULL,
+  `fiva_cod_sucu` INT NOT NULL,
+  `fiva_cod_ejer` INT NOT NULL,
+  `fiva_cod_tran` VARCHAR(20) NOT NULL,
+  `fiva_cod_clpv` INT NOT NULL,
+  `fiva_num_fact` VARCHAR(50) NOT NULL,
+  `fiva_num_seri` VARCHAR(50) NULL,
+  `fiva_tipo_reg` VARCHAR(20) NOT NULL DEFAULT 'FACTURA',
+  `fiva_por_iva` DECIMAL(10,2) NOT NULL,
+  `fiva_base_bienes` DECIMAL(14,2) NOT NULL DEFAULT 0,
+  `fiva_val_iva_bienes` DECIMAL(14,2) NOT NULL DEFAULT 0,
+  `fiva_total_bienes` DECIMAL(14,2) NOT NULL DEFAULT 0,
+  `fiva_base_servicios` DECIMAL(14,2) NOT NULL DEFAULT 0,
+  `fiva_val_iva_servicios` DECIMAL(14,2) NOT NULL DEFAULT 0,
+  `fiva_total_servicios` DECIMAL(14,2) NOT NULL DEFAULT 0,
+  `fiva_cod_asto` VARCHAR(50) NULL,
+  `fiva_usuario_id` BIGINT NULL,
+  `fiva_fecha_server` DATETIME NULL,
+  PRIMARY KEY (`fiva_id`),
+  KEY `idx_saefprv_iva_det_factura` (`fiva_cod_empr`, `fiva_cod_sucu`, `fiva_cod_ejer`, `fiva_cod_tran`, `fiva_cod_clpv`, `fiva_num_fact`),
+  KEY `idx_saefprv_iva_det_porcentaje` (`fiva_por_iva`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;

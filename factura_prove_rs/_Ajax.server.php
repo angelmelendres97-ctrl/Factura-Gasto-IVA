@@ -10,6 +10,55 @@ include_once './mayorizacion.inc.php';
   Herramientas de apoyo
  */
 
+
+function factura_prove_iva_multiple_detalle($aForm = array())
+{
+	$detalle = array();
+	if (isset($aForm['iva_multiple_detalle']) && trim($aForm['iva_multiple_detalle']) != '') {
+		$decode = json_decode($aForm['iva_multiple_detalle'], true);
+		if (is_array($decode)) {
+			foreach ($decode as $row) {
+				$porcentaje = isset($row['porcentaje_iva']) ? (float)$row['porcentaje_iva'] : 0;
+				$base_bienes = isset($row['base_bienes']) ? (float)$row['base_bienes'] : 0;
+				$base_servicios = isset($row['base_servicios']) ? (float)$row['base_servicios'] : 0;
+				$iva_bienes = round(($base_bienes * $porcentaje) / 100, 2);
+				$iva_servicios = round(($base_servicios * $porcentaje) / 100, 2);
+				if ($base_bienes != 0 || $base_servicios != 0 || $iva_bienes != 0 || $iva_servicios != 0) {
+					$detalle[] = array(
+						'porcentaje_iva' => $porcentaje,
+						'base_bienes' => $base_bienes,
+						'iva_bienes' => $iva_bienes,
+						'total_bienes' => round($base_bienes + $iva_bienes, 2),
+						'base_servicios' => $base_servicios,
+						'iva_servicios' => $iva_servicios,
+						'total_servicios' => round($base_servicios + $iva_servicios, 2),
+					);
+				}
+			}
+		}
+	}
+	return $detalle;
+}
+
+function factura_prove_aplicar_iva_multiple($aForm, &$valor_grab12b, &$valor_grab12s, &$ivab, &$ivas, &$ivabp)
+{
+	$detalle = factura_prove_iva_multiple_detalle($aForm);
+	if (count($detalle) == 0) return $detalle;
+	$valor_grab12b = 0; $valor_grab12s = 0; $ivab = 0; $ivas = 0;
+	foreach ($detalle as $row) {
+		$valor_grab12b += $row['base_bienes'];
+		$valor_grab12s += $row['base_servicios'];
+		$ivab += $row['iva_bienes'];
+		$ivas += $row['iva_servicios'];
+	}
+	$valor_grab12b = round($valor_grab12b, 2);
+	$valor_grab12s = round($valor_grab12s, 2);
+	$ivab = round($ivab, 2);
+	$ivas = round($ivas, 2);
+	$ivabp = 0;
+	return $detalle;
+}
+
 function asignar_cuenta()
 {
 
@@ -2237,6 +2286,19 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 				';
 
 
+	$iva_multiple_porcentajes = array(0, 5, 12, 15);
+	$iva_multiple_rows = '';
+	foreach ($iva_multiple_porcentajes as $iva_multiple_porcentaje) {
+		$iva_multiple_rows .= '<tr data-iva-multiple-row="1" data-iva-pct="' . $iva_multiple_porcentaje . '">
+			<td>Valor ' . $iva_multiple_porcentaje . '%</td>
+			<td><input type="number" step="0.01" class="form-control input-sm" style="width:90px; height:25px; text-align:right" data-iva-campo="baseb" onchange="facturaProveActualizarIvaMultiple();" value="0"></td>
+			<td><input type="number" step="0.01" class="form-control input-sm" style="width:90px; height:25px; text-align:right" data-iva-campo="ivab" value="0.00" readonly></td>
+			<td><input type="number" step="0.01" class="form-control input-sm" style="width:90px; height:25px; text-align:right" data-iva-campo="bases" onchange="facturaProveActualizarIvaMultiple();" value="0"></td>
+			<td><input type="number" step="0.01" class="form-control input-sm" style="width:90px; height:25px; text-align:right" data-iva-campo="ivas" value="0.00" readonly></td>
+			<td><input type="number" step="0.01" class="form-control input-sm" style="width:90px; height:25px; text-align:right" data-iva-campo="total" value="0.00" readonly></td>
+		</tr>';
+	}
+
 	//valores facturas
 	$sHtmlValoresFacturas .= '<table class="table table-bordered table-striped table-condensed" style="width: 100%; margin: 0px;">
 								<tr>
@@ -2267,6 +2329,16 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 										<div class="btn btn-success btn-sm" onclick="cargarValoresPlanillaClpv();">
 											<span class="glyphicon glyphicon-refresh"></span>
 										</div>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" colspan="4">
+										<table class="table-bordered table-striped table-condensed" style="width:100%; margin:0px;">
+											<tr><td class="bg-info" colspan="6">IVA MULTIPLE (opcional): registre bases por porcentaje; los totales legacy se actualizan automaticamente.</td></tr>
+											<tr class="info"><td>Porcentaje</td><td>Base bienes</td><td>IVA bienes</td><td>Base servicios</td><td>IVA servicios</td><td>Total</td></tr>
+											' . $iva_multiple_rows . '
+											<tr><td colspan="6"><input type="hidden" id="iva_multiple_detalle" name="iva_multiple_detalle" value=""></td></tr>
+										</table>
 									</td>
 								</tr>
 								<tr>
@@ -4114,8 +4186,7 @@ function totales($aForm = '')
 	// -------------------------------------------------------------------------------------------------------
 	$ivas = round((($ivabp / 100) * $valor_grab12s), 2);
 
-
-
+	factura_prove_aplicar_iva_multiple($aForm, $valor_grab12b, $valor_grab12s, $ivab, $ivas, $ivabp);
 
 	// TOTALES
 	$valor_grab12t = $valor_grab12b + $valor_grab12s;
@@ -4763,6 +4834,7 @@ function guarda_pedido($codpgs, $aForm = '')
 			$valor_grab0s   = $aForm['valor_grab0s'];
 			$ices           = $aForm['ices'];
 			$ivas           = $aForm['ivas'];
+			$iva_multiple_detalle = factura_prove_aplicar_iva_multiple($aForm, $valor_grab12b, $valor_grab12s, $ivab, $ivas, $ivabp);
 			$totals         = $aForm['totals'];
 
 			// TOTAL
@@ -4770,6 +4842,10 @@ function guarda_pedido($codpgs, $aForm = '')
 			$valor_grab0t   = $aForm['valor_grab0t'];
 			$icet           = $aForm['icet'];
 			$ivat           = $aForm['ivat'];
+			if (!empty($iva_multiple_detalle)) {
+				$valor_grab12t = $valor_grab12b + $valor_grab12s;
+				$ivat = $ivab + $ivas;
+			}
 			//no objeto y excento de iva
 			$valor_noObjIva = $aForm['valor_noObjIva'];
 			$valor_exentoIva = $aForm['valor_exentoIva'];
@@ -5188,6 +5264,22 @@ function guarda_pedido($codpgs, $aForm = '')
 													'$fecha_servidor_asd', '$usuario_session' $val_tip_rent
 												); ";
 					$oIfx->QueryT($sql);
+
+					if (!empty($iva_multiple_detalle)) {
+						$sql = "delete from saefprv_iva_det where fiva_cod_empr = $idempresa and fiva_cod_sucu = $idsucursal and fiva_cod_ejer = $idejer_fact and fiva_cod_tran = '$comprobante' and fiva_num_fact = '$factura' and fiva_cod_clpv = $cod_prove";
+						$oIfx->QueryT($sql);
+						foreach ($iva_multiple_detalle as $iva_row) {
+							$porcentaje_iva = number_format($iva_row['porcentaje_iva'], 2, '.', '');
+							$base_bienes = number_format($iva_row['base_bienes'], 2, '.', '');
+							$iva_bienes = number_format($iva_row['iva_bienes'], 2, '.', '');
+							$total_bienes = number_format($iva_row['total_bienes'], 2, '.', '');
+							$base_servicios = number_format($iva_row['base_servicios'], 2, '.', '');
+							$iva_servicios = number_format($iva_row['iva_servicios'], 2, '.', '');
+							$total_servicios = number_format($iva_row['total_servicios'], 2, '.', '');
+							$sql = "insert into saefprv_iva_det (fiva_cod_empr, fiva_cod_sucu, fiva_cod_ejer, fiva_cod_tran, fiva_cod_clpv, fiva_num_fact, fiva_num_seri, fiva_tipo_reg, fiva_por_iva, fiva_base_bienes, fiva_val_iva_bienes, fiva_total_bienes, fiva_base_servicios, fiva_val_iva_servicios, fiva_total_servicios, fiva_cod_asto, fiva_usuario_id, fiva_fecha_server) values ($idempresa, $idsucursal, $idejer_fact, '$comprobante', $cod_prove, '$factura', '$serie', 'FACTURA', $porcentaje_iva, $base_bienes, $iva_bienes, $total_bienes, $base_servicios, $iva_servicios, $total_servicios, '$secu_asto', '$usuario_session', '$fecha_servidor_asd')";
+							$oIfx->QueryT($sql);
+						}
+					}
 
 					$Logs->crearLog($factura, $secu_asto, $sql);
 
