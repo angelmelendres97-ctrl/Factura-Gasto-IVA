@@ -2342,26 +2342,17 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 													<button type="button" class="btn btn-primary btn-xs" onclick="agregarFilaIvaMultiple(\'bienes\', 0, 0, 0);">Agregar IVA bienes</button>
 												</td>
 											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab12b') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab12b') . '</td>
+											<tr class="info">
+												<td colspan="2">Resumen dinámico BIENES</td>
 											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab0b') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab0b') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('iceb') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('iceb') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('ivab') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('ivab') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('ivabp') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('ivabp') . '</td>
-											</tr>
+											<tbody id="iva_multiple_bienes_resumen"></tbody>
+											<tbody style="display:none;">
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab12b') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab12b') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab0b') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab0b') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('iceb') . '</td><td align="right">' . $ifu->ObjetoHtml('iceb') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('ivab') . '</td><td align="right">' . $ifu->ObjetoHtml('ivab') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('ivabp') . '</td><td align="right">' . $ifu->ObjetoHtml('ivabp') . '</td></tr>
+											</tbody>
 											<tr>
 												<td></td>
 												<td></td>
@@ -2403,22 +2394,16 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 													<button type="button" class="btn btn-primary btn-xs" onclick="agregarFilaIvaMultiple(\'servicios\', 0, 0, 0);">Agregar IVA servicios</button>
 												</td>
 											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab12s') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab12s') . '</td>
+											<tr class="info">
+												<td colspan="2">Resumen dinámico SERVICIOS</td>
 											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab0s') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab0s') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('ices') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('ices') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('ivas') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('ivas') . '</td>
-											</tr>
+											<tbody id="iva_multiple_servicios_resumen"></tbody>
+											<tbody style="display:none;">
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab12s') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab12s') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab0s') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab0s') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('ices') . '</td><td align="right">' . $ifu->ObjetoHtml('ices') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('ivas') . '</td><td align="right">' . $ifu->ObjetoHtml('ivas') . '</td></tr>
+											</tbody>
 											
 											<tr>
 												<td>&nbsp;</td>
@@ -2431,38 +2416,18 @@ function genera_formulario_pedido($cod = 0, $tmp = 0, $sAccion = 'nuevo', $aForm
 											<tr>
 												<td class="bg-info" colspan="2">TOTAL</td>
 											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab12t') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab12t') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_grab0t') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_grab0t') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('icet') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('icet') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('ivat') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('ivat') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_noObjIva') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_noObjIva') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('valor_exentoIva') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('valor_exentoIva') . '</td>
-											</tr>
-											<tr style="display: none;">
-												<td>' . $ifu->ObjetoHtmlLBL('no_obj_iva') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('no_obj_iva') . '</td>
-											</tr>
-											<tr>
-												<td>' . $ifu->ObjetoHtmlLBL('totals') . '</td>
-												<td align="right">' . $ifu->ObjetoHtml('totals') . '</td>
-											</tr>
+											<tr class="info"><td colspan="2">Resumen dinámico TOTAL</td></tr>
+											<tbody id="iva_multiple_total_resumen"></tbody>
+											<tbody style="display:none;">
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab12t') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab12t') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_grab0t') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_grab0t') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('icet') . '</td><td align="right">' . $ifu->ObjetoHtml('icet') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('ivat') . '</td><td align="right">' . $ifu->ObjetoHtml('ivat') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_noObjIva') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_noObjIva') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('valor_exentoIva') . '</td><td align="right">' . $ifu->ObjetoHtml('valor_exentoIva') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('no_obj_iva') . '</td><td align="right">' . $ifu->ObjetoHtml('no_obj_iva') . '</td></tr>
+											<tr><td>' . $ifu->ObjetoHtmlLBL('totals') . '</td><td align="right">' . $ifu->ObjetoHtml('totals') . '</td></tr>
+											</tbody>
 										</table>
 									</td>
 								</tr>

@@ -619,6 +619,7 @@ else $codclpv = 0; ?>
             };
 
             ['bienes', 'servicios'].forEach(function(tipo) {
+                resumen[tipo].porcentajes = {};
                 var cuerpo = document.getElementById('iva_multiple_' + tipo + '_body');
                 if (!cuerpo) {
                     return;
@@ -627,11 +628,8 @@ else $codclpv = 0; ?>
                     var porcentaje = numeroIvaMultiple(fila.querySelector('.iva-multiple-porcentaje').value);
                     var base = numeroIvaMultiple(fila.querySelector('.iva-multiple-base').value);
                     var ivaInput = fila.querySelector('.iva-multiple-iva');
-                    var iva = numeroIvaMultiple(ivaInput.value);
-                    if (base > 0 && (ivaInput.value === '' || iva === 0)) {
-                        iva = Math.round((base * porcentaje / 100) * 100) / 100;
-                        ivaInput.value = iva.toFixed(2);
-                    }
+                    var iva = Math.round((base * porcentaje / 100) * 100) / 100;
+                    ivaInput.value = iva.toFixed(2);
                     var total = Math.round((base + iva) * 100) / 100;
                     fila.querySelector('.iva-multiple-total').value = total.toFixed(2);
                     if (porcentaje > 0) {
@@ -641,6 +639,12 @@ else $codclpv = 0; ?>
                     }
                     resumen[tipo].iva += iva;
                     resumen[tipo].total += total;
+                    if (!resumen[tipo].porcentajes[porcentaje]) {
+                        resumen[tipo].porcentajes[porcentaje] = { base: 0, iva: 0, total: 0 };
+                    }
+                    resumen[tipo].porcentajes[porcentaje].base += base;
+                    resumen[tipo].porcentajes[porcentaje].iva += iva;
+                    resumen[tipo].porcentajes[porcentaje].total += total;
                     resumen[tipo].detalles.push({
                         tipo: tipo,
                         porcentaje_iva: porcentaje,
@@ -657,7 +661,56 @@ else $codclpv = 0; ?>
             if (document.getElementById('valor_grab12s')) document.getElementById('valor_grab12s').value = resumen.servicios.base_gravada.toFixed(2);
             if (document.getElementById('valor_grab0s')) document.getElementById('valor_grab0s').value = resumen.servicios.base_cero.toFixed(2);
             if (document.getElementById('ivas')) document.getElementById('ivas').value = resumen.servicios.iva.toFixed(2);
+            var baseGravadaTotal = resumen.bienes.base_gravada + resumen.servicios.base_gravada;
+            var baseCeroTotal = resumen.bienes.base_cero + resumen.servicios.base_cero;
+            var ivaTotal = resumen.bienes.iva + resumen.servicios.iva;
+            if (document.getElementById('valor_grab12t')) document.getElementById('valor_grab12t').value = baseGravadaTotal.toFixed(2);
+            if (document.getElementById('valor_grab0t')) document.getElementById('valor_grab0t').value = baseCeroTotal.toFixed(2);
+            if (document.getElementById('ivat')) document.getElementById('ivat').value = ivaTotal.toFixed(2);
+            if (document.getElementById('totals')) document.getElementById('totals').value = (baseGravadaTotal + baseCeroTotal + ivaTotal + numeroIvaMultiple(document.getElementById('icet') ? document.getElementById('icet').value : 0) + numeroIvaMultiple(document.getElementById('valor_noObjIva') ? document.getElementById('valor_noObjIva').value : 0) + numeroIvaMultiple(document.getElementById('valor_exentoIva') ? document.getElementById('valor_exentoIva').value : 0)).toFixed(2);
+            renderizarResumenIvaMultiple(resumen);
             sincronizarIvaMultiple(resumen);
+        }
+
+        function renderizarResumenIvaMultiple(resumen) {
+            function ordenarPorcentajes(mapa) { return Object.keys(mapa).map(numeroIvaMultiple).sort(function(a, b) { return a - b; }); }
+            function filaResumen(etiqueta, valor) { return '<tr><td>' + etiqueta + '</td><td align="right"><input class="form-control input-sm" type="text" value="' + valor.toFixed(2) + '" readonly style="width:90px; height:25px; text-align:right"></td></tr>'; }
+            ['bienes', 'servicios'].forEach(function(tipo) {
+                var contenedor = document.getElementById('iva_multiple_' + tipo + '_resumen');
+                if (!contenedor) return;
+                var html = '';
+                ordenarPorcentajes(resumen[tipo].porcentajes).forEach(function(porcentaje) {
+                    var item = resumen[tipo].porcentajes[porcentaje];
+                    if (item.base > 0 || item.iva > 0) {
+                        html += filaResumen('Valor ' + porcentaje + '%:', item.base);
+                        if (porcentaje > 0) html += filaResumen('IVA ' + porcentaje + '%:', item.iva);
+                    }
+                });
+                html += filaResumen('Total ' + (tipo === 'bienes' ? 'bienes' : 'servicios') + ':', resumen[tipo].total);
+                contenedor.innerHTML = html;
+            });
+            var totalContenedor = document.getElementById('iva_multiple_total_resumen');
+            if (totalContenedor) {
+                var totales = {};
+                ['bienes', 'servicios'].forEach(function(tipo) {
+                    ordenarPorcentajes(resumen[tipo].porcentajes).forEach(function(porcentaje) {
+                        if (!totales[porcentaje]) totales[porcentaje] = { base: 0, iva: 0 };
+                        totales[porcentaje].base += resumen[tipo].porcentajes[porcentaje].base;
+                        totales[porcentaje].iva += resumen[tipo].porcentajes[porcentaje].iva;
+                    });
+                });
+                var htmlTotal = '';
+                ordenarPorcentajes(totales).forEach(function(porcentaje) {
+                    if (totales[porcentaje].base > 0 || totales[porcentaje].iva > 0) {
+                        htmlTotal += filaResumen('Valor ' + porcentaje + '%:', totales[porcentaje].base);
+                    }
+                });
+                ordenarPorcentajes(totales).forEach(function(porcentaje) {
+                    if (porcentaje > 0 && totales[porcentaje].iva > 0) htmlTotal += filaResumen('IVA ' + porcentaje + '%:', totales[porcentaje].iva);
+                });
+                htmlTotal += filaResumen('Total general:', resumen.bienes.total + resumen.servicios.total);
+                totalContenedor.innerHTML = htmlTotal;
+            }
         }
 
         function sincronizarIvaMultiple(resumen) {
