@@ -63,8 +63,27 @@
             if (ProcesarFormulario() == true) {
 				var opFactura = getRadioButtonSelectedValue(document.form1.opFactura);
                 $('#data-table').DataTable().destroy();
+                configurarCabeceraReporteNormal();
                 consultarJson(opFactura);
             }
+        }
+
+        function consultarNuevo() {
+            if (ProcesarFormulario() == true) {
+                $('#data-table').DataTable().destroy();
+                configurarCabeceraReporteNuevo();
+                consultarJsonNuevo();
+            }
+        }
+
+        function configurarCabeceraReporteNormal() {
+            $('#data-table thead').html(window.cabeceraReporteNormalHtml);
+            $('#data-table tfoot').html(window.pieReporteNormalHtml);
+        }
+
+        function configurarCabeceraReporteNuevo() {
+            $('#data-table thead').html(window.cabeceraReporteNuevoHtml);
+            $('#data-table tfoot').html(window.pieReporteNuevoHtml);
         }
 
         function verDiarioContable(empr, sucu, ejer, mes, asto) {
@@ -215,11 +234,15 @@
                                 <span class="glyphicon glyphicon-search"></span>
                                 Consultar
                             </button>
+                            <button type="button" class="btn btn-success" onclick="consultarNuevo();">
+                                <span class="glyphicon glyphicon-list-alt"></span>
+                                Consulta nuevo
+                            </button>
                         </div>	
                     </div>
                     <div class="table-responsive" style="width: 100%;">
                         <table id="data-table" class="table table-striped table-bordered table-hover table-condensed" style="width: 100%;" align="center">
-                            <thead>
+                            <thead id="cabeceraReporteNormal">
 								<tr>
 									<td class="bg-info">No.</td>    
 									<td class="bg-info">RUC</td>
@@ -243,7 +266,31 @@
 									<td class="bg-info">Asiento Contable</td>
 								</tr>
                             </thead>
-							<tfoot>
+                            <thead id="cabeceraReporteNuevo" style="display:none;">
+                                <tr>
+                                    <td class="bg-info">No.</td>
+                                    <td class="bg-info">RUC</td>
+                                    <td class="bg-info">Razon Social</td>
+                                    <td class="bg-info">Fecha</td>
+                                    <td class="bg-info">Tipo</td>
+                                    <td class="bg-info">Serie</td>
+                                    <td class="bg-info">Secuencial</td>
+                                    <td class="bg-info">Detalle</td>
+                                    <td class="bg-info">VALOR 15%</td>
+                                    <td class="bg-info">VALOR 5%</td>
+                                    <td class="bg-info">VALOR 0%</td>
+                                    <td class="bg-info">IVA 15%</td>
+                                    <td class="bg-info">IVA 5%</td>
+                                    <td class="bg-info">Total Factura</td>
+                                    <td class="bg-info">C&oacute;digo Retenci&oacute;n</td>
+                                    <td class="bg-info">No. Retenci&oacute;n</td>
+                                    <td class="bg-info">Valor Base Retenci&oacute;n</td>
+                                    <td class="bg-info">Valor Retenido</td>
+                                    <td class="bg-info">Total a Pagar</td>
+                                    <td class="bg-info">Asiento Contable</td>
+                                </tr>
+                            </thead>
+							<tfoot id="pieReporteNormal">
 								<tr>
 									<td colspan="8" align="right" class="fecha_letra bg-danger">Total: </td>
 									<td class="fecha_letra bg-danger"></th>
@@ -260,6 +307,23 @@
 									<td class="fecha_letra bg-danger"></td>
 								</tr>
 							</tfoot>
+                            <tfoot id="pieReporteNuevo" style="display:none;">
+                                <tr>
+                                    <td colspan="8" align="right" class="fecha_letra bg-danger">Total: </td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                    <td class="fecha_letra bg-danger"></td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>
@@ -308,7 +372,17 @@
             </form>
         </div>
     </body>
-    <script>cargar_lista();</script>
+    <script>
+        $(function () {
+            window.cabeceraReporteNormalHtml = $('#cabeceraReporteNormal').html();
+            window.cabeceraReporteNuevoHtml = $('#cabeceraReporteNuevo').html();
+            window.pieReporteNormalHtml = $('#pieReporteNormal').html();
+            window.pieReporteNuevoHtml = $('#pieReporteNuevo').html();
+            $('#cabeceraReporteNuevo').remove();
+            $('#pieReporteNuevo').remove();
+            cargar_lista();
+        });
+    </script>
 
     <? /*     * ***************************************************************** */ ?>
     <? /* NO MODIFICAR ESTA SECCION */ ?>
