@@ -61,9 +61,15 @@
 
         function consultar() {
             if (ProcesarFormulario() == true) {
-				var opFactura = getRadioButtonSelectedValue(document.form1.opFactura);
-                $('#data-table').DataTable().destroy();
+                var opFactura = getRadioButtonSelectedValue(document.form1.opFactura);
                 consultarJson(opFactura);
+            }
+        }
+
+        function consultarNuevo() {
+            if (ProcesarFormulario() == true) {
+                var opFactura = getRadioButtonSelectedValue(document.form1.opFactura);
+                consultarJsonNuevo(opFactura);
             }
         }
 
@@ -214,6 +220,10 @@
                             <button type="button" class="btn btn-primary" onclick="consultar();">
                                 <span class="glyphicon glyphicon-search"></span>
                                 Consultar
+                            </button>
+                            <button type="button" class="btn btn-success" onclick="consultarNuevo();">
+                                <span class="glyphicon glyphicon-list-alt"></span>
+                                Consulta Nuevo
                             </button>
                         </div>	
                     </div>
