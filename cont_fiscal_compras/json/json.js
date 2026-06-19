@@ -104,3 +104,78 @@ function consultarJson(opFactura) {
         }
     });
 }
+function sumarValoresReporteNuevo(valor) {
+    var texto = String(valor).replace(/<br\s*\/?\s*>/gi, ' ')
+        .replace(/<[^>]*>/g, ' ')
+        .replace(/,/g, ' ');
+    var valores = texto.match(/-?\d+(\.\d+)?/g);
+    var total = 0;
+    if (valores) {
+        for (var i = 0; i < valores.length; i++) {
+            total += parseFloat(valores[i]) || 0;
+        }
+    }
+    return total;
+}
+
+function consultarJsonNuevo() {
+    var empresa = $("#empresa").val();
+    var sucursal = $("#sucursal").val();
+    var fecha_inicio = $("#fecha_inicio").val();
+    var fecha_fin = $("#fecha_fin").val();
+
+    $('#data-table').DataTable({
+        scrollY: '50vh',
+        scrollX: true,
+        dom: 'Bfrtip',
+        "buttons": [
+            {
+                extend: 'pdfHtml5',
+                title: 'DETALLE DE REPORTE COMPRAS IVA',
+                orientation: 'landscape',
+                pageSize: 'A4',
+                footer: true
+            }
+        ],
+        "searching": true,
+        "pageLength": -1,
+        "bDeferRender": true,
+        "sPaginationType": "full_numbers",
+        "ajax": {
+            "url": "buscar_nuevo.php?empresa=" + empresa + "&sucursal=" + sucursal + "&fecha_inicio=" + fecha_inicio + "&fecha_fin=" + fecha_fin,
+            "type": "POST"
+        },
+        "columns": [
+            {"data": "col_a"}, {"data": "col_b"}, {"data": "col_c"}, {"data": "col_d"},
+            {"data": "col_e"}, {"data": "col_f"}, {"data": "col_g"}, {"data": "col_h"},
+            {"data": "col_i"}, {"data": "col_j"}, {"data": "col_k"}, {"data": "col_l"},
+            {"data": "col_m"}, {"data": "col_n"}, {"data": "col_o"}, {"data": "col_p"},
+            {"data": "col_q"}, {"data": "col_r"}, {"data": "col_s"}
+        ],
+        "footerCallback": function () {
+            var columnasTotal = [7, 8, 9, 10, 11, 12, 15, 16, 17];
+            var api = this.api();
+            columnasTotal.forEach(function (columna) {
+                var total = api.column(columna).data().reduce(function (a, b) {
+                    return Math.round((a + sumarValoresReporteNuevo(b)) * 100) / 100;
+                }, 0);
+                $(api.column(columna).footer()).html(total.toFixed(2));
+            });
+        },
+        "initComplete": function () {
+            $("#btnDescargarExcelNuevo").show();
+        },
+        "oLanguage": {
+            "sProcessing": "Procesando...",
+            "sLengthMenu": "Mostrar registros",
+            "sZeroRecords": "No se encontraron resultados",
+            "sEmptyTable": "Ningun dato disponible en esta tabla",
+            "sInfo": "Mostrando del (_START_ al _END_) de un total de _TOTAL_ registros",
+            "sInfoEmpty": "Mostrando del 0 al 0 de un total de 0 registros",
+            "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "sSearch": "Filtrar:",
+            "sLoadingRecords": "Por favor espere - cargando...",
+            "oPaginate": {"sFirst": "Primero", "sLast": "Ultimo", "sNext": "Siguiente", "sPrevious": "Anterior"}
+        }
+    });
+}
