@@ -30,7 +30,7 @@
     <script type="text/javascript" language="JavaScript" src="../../Include/js/dataTables/dataTables.vfs_fonts.js"></script>
     <script type="text/javascript" language="JavaScript" src="../../Include/js/dataTables/dataTables.buttons.html5.min.js"></script>
     <script type="text/javascript" language="JavaScript" src="../../Include/js/dataTables/dataTables.buttons.print.min.js"></script>
-    <script type="text/javascript" language="JavaScript" src="json/json.js?v=<?= filemtime(dirname(__FILE__) . '/json/json.js') ?>"></script>
+    <script type="text/javascript" language="JavaScript" src="json/json.js"></script>
 
     <!-- Select2 -->
     <script src="../../Include/Componentes/bower_components/select2/dist/js/select2.full.min.js"></script>
@@ -61,15 +61,9 @@
 
         function consultar() {
             if (ProcesarFormulario() == true) {
-                var opFactura = getRadioButtonSelectedValue(document.form1.opFactura);
+				var opFactura = getRadioButtonSelectedValue(document.form1.opFactura);
+                $('#data-table').DataTable().destroy();
                 consultarJson(opFactura);
-            }
-        }
-
-        function consultarNuevo() {
-            if (ProcesarFormulario() == true) {
-                var opFactura = getRadioButtonSelectedValue(document.form1.opFactura);
-                consultarJsonNuevo(opFactura);
             }
         }
 
@@ -220,10 +214,6 @@
                             <button type="button" class="btn btn-primary" onclick="consultar();">
                                 <span class="glyphicon glyphicon-search"></span>
                                 Consultar
-                            </button>
-                            <button type="button" class="btn btn-success" onclick="consultarNuevo();">
-                                <span class="glyphicon glyphicon-list-alt"></span>
-                                Consulta Nuevo
                             </button>
                         </div>	
                     </div>
